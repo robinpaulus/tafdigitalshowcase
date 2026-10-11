@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login SO - TAF Digital Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+
+            <div class="logo-area">
+                <div class="taf-logo">TAF</div>
+                <span>Digital Showcase</span>
+            </div>
+
+            <a href="index.html" class="back-home-link">
+                Kembali ke Showcase
+            </a>
+
+        </div>
+    </header>
+
+    <main class="so-login-page">
+
+        <section class="so-login-card">
+
+            <div class="so-login-header">
+                <span class="so-login-label">TAF INTERNAL</span>
+
+                <h1>Login Sales Officer</h1>
+
+                <p>
+                    Masuk untuk mengelola lead dan memantau proses customer.
+                </p>
+            </div>
+
+            <form id="so-login-form">
+
+                <div class="form-group">
+                    <label for="so-id">
+                        ID Sales Officer
+                    </label>
+
+                    <input
+                        type="text"
+                        id="so-id"
+                        name="so-id"
+                        placeholder="Masukkan ID Sales Officer"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="so-password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="so-password"
+                        name="so-password"
+                        placeholder="Masukkan password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="so-login-submit">
+                    Masuk ke Dashboard
+                </button>
+
+            </form>
+
+            <p class="so-login-note">
+                Akses ini ditujukan untuk kebutuhan internal Sales Officer.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

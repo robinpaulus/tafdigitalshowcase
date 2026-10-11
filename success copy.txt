@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Lead Berhasil Dikirim | TAF Digital Showcase</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="main-header">
+        <div class="header-container">
+
+            <div class="logo-area">
+                <div class="taf-logo">TAF</div>
+                <span>Digital Showcase</span>
+            </div>
+
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="index.html#unit-section">Cari Unit</a>
+                <a href="login-so.html" class="so-login-button">
+                    Login SO
+                </a>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Buka menu" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+
+
+    <main class="success-page">
+
+
+        <section class="success-card">
+
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+
+            <span class="section-label">
+                TAF DIGITAL SHOWCASE
+            </span>
+
+
+            <h1>
+                Ketertarikan Berhasil Dikirim
+            </h1>
+
+
+            <p class="success-description">
+                Terima kasih. Informasi ketertarikan kamu
+                telah diterima dan akan menjadi lead untuk
+                ditindaklanjuti oleh TAF.
+            </p>
+
+
+            <div class="lead-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+
+                    <strong>
+                        Status: New Lead
+                    </strong>
+
+                    <p>
+                        Lead berhasil tercatat untuk proses
+                        follow-up.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="success-summary">
+
+
+                <div class="success-summary-header">
+
+                    <span>
+                        UNIT YANG DIPILIH
+                    </span>
+
+                    <strong id="success-vehicle-name">
+                        Toyota Avanza 2022
+                    </strong>
+
+                </div>
+
+
+                <div class="success-summary-row">
+
+                    <span>
+                        Harga Unit
+                    </span>
+
+                    <strong id="success-vehicle-price">
+                        Rp 175.000.000
+                    </strong>
+
+                </div>
+
+
+                <div class="success-summary-row">
+
+                    <span>
+                        Uang Muka
+                    </span>
+
+                    <strong id="success-dp">
+                        Rp 35.000.000
+                    </strong>
+
+                </div>
+
+
+                <div class="success-summary-row">
+
+                    <span>
+                        Tenor
+                    </span>
+
+                    <strong id="success-tenor">
+                        48 Bulan
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="success-next">
+
+
+                <div class="success-next-header">
+
+                    <span class="section-label">
+                        SELANJUTNYA
+                    </span>
+
+                    <h2>
+                        TAF akan melakukan follow-up
+                    </h2>
+
+                    <p>
+                        TAF dapat menghubungi kamu untuk
+                        membahas unit dan kebutuhan pembiayaan
+                        lebih lanjut.
+                    </p>
+
+                </div>
+
+
+                <div class="success-steps">
+
+
+                    <div class="success-step">
+
+                        <div class="success-step-number">
+                            1
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Lead diterima
+                            </strong>
+
+                            <p>
+                                Informasi ketertarikan customer
+                                tercatat sebagai New Lead.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="success-step">
+
+                        <div class="success-step-number">
+                            2
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Follow-up TAF
+                            </strong>
+
+                            <p>
+                                TAF melakukan follow-up untuk
+                                memahami kebutuhan customer.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="success-step">
+
+                        <div class="success-step-number">
+                            3
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Lanjutkan proses
+                            </strong>
+
+                            <p>
+                                Jika customer melanjutkan,
+                                proses dapat diteruskan ke tahap
+                                berikutnya.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="success-actions">
+
+                <a
+                    href="index.html"
+                    class="success-primary-button"
+                >
+                    Cari Unit Lain
+                </a>
+
+                <a
+                    href="index.html"
+                    class="success-secondary-button"
+                >
+                    Kembali ke Home
+                </a>
+
+            </div>
+
+
+            <p class="success-prototype-note">
+                Prototype TAF Digital Showcase —
+                data lead saat ini belum terhubung dengan
+                sistem TAF.
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

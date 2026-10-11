@@ -1,0 +1,4206 @@
+/* =====================================================
+   DATA KENDARAAN
+   Prototype / Dummy Data
+===================================================== */
+
+const vehicleData = {
+
+    avanza: {
+        name: "Toyota Avanza 2022",
+        price: "Rp 175.000.000",
+        mileage: "67.000 km",
+        transmission: "Automatic",
+        fuel: "Bensin",
+        color: "Putih",
+        brand: "Toyota",
+        model: "Avanza",
+        year: "2022",
+        type: "1.5 G",
+        condition: "Baik",
+        showroom: "VIP Cars Mobilindo - Palembang"
+    },
+
+    xpander: {
+        name: "Mitsubishi Xpander 2023",
+        price: "Rp 210.000.000",
+        mileage: "45.000 km",
+        transmission: "Automatic",
+        fuel: "Bensin",
+        color: "Hitam",
+        brand: "Mitsubishi",
+        model: "Xpander",
+        year: "2023",
+        type: "Ultimate",
+        condition: "Baik",
+        showroom: "Auto 77 Palembang"
+    },
+
+    rush: {
+        name: "Toyota Rush 2022",
+        price: "Rp 205.000.000",
+        mileage: "52.000 km",
+        transmission: "Automatic",
+        fuel: "Bensin",
+        color: "Silver",
+        brand: "Toyota",
+        model: "Rush",
+        year: "2022",
+        type: "1.5 TRD Sportivo",
+        condition: "Baik",
+        showroom: "Partner Showroom TAF"
+    },
+
+    brio: {
+        name: "Honda Brio 2023",
+        price: "Rp 165.000.000",
+        mileage: "38.000 km",
+        transmission: "Automatic",
+        fuel: "Bensin",
+        color: "Merah",
+        brand: "Honda",
+        model: "Brio",
+        year: "2023",
+        type: "RS",
+        condition: "Baik",
+        showroom: "Partner Showroom TAF"
+    }
+
+};
+
+
+/* =====================================================
+   LOAD VEHICLE DETAIL
+===================================================== */
+
+function loadVehicleDetail() {
+
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const vehicleKey =
+        params.get("vehicle");
+
+    const vehicle =
+        vehicleData[vehicleKey];
+
+
+    // Jika bukan halaman detail
+    // atau parameter kendaraan tidak ditemukan
+    if (!vehicle) {
+        return;
+    }
+
+
+    /* ---------------------------------------------
+       INFORMASI UTAMA
+    --------------------------------------------- */
+
+    const vehicleName =
+        document.getElementById("vehicle-name");
+
+    const vehiclePrice =
+        document.getElementById("vehicle-price");
+
+
+    if (vehicleName) {
+        vehicleName.textContent =
+            vehicle.name;
+    }
+
+    if (vehiclePrice) {
+        vehiclePrice.textContent =
+            vehicle.price;
+    }
+
+
+    /* ---------------------------------------------
+       QUICK INFORMATION
+    --------------------------------------------- */
+
+    const vehicleMileage =
+        document.getElementById("vehicle-mileage");
+
+    const vehicleTransmission =
+        document.getElementById("vehicle-transmission");
+
+    const vehicleFuel =
+        document.getElementById("vehicle-fuel");
+
+    const vehicleColor =
+        document.getElementById("vehicle-color");
+
+
+    if (vehicleMileage) {
+        vehicleMileage.textContent =
+            vehicle.mileage;
+    }
+
+    if (vehicleTransmission) {
+        vehicleTransmission.textContent =
+            vehicle.transmission;
+    }
+
+    if (vehicleFuel) {
+        vehicleFuel.textContent =
+            vehicle.fuel;
+    }
+
+    if (vehicleColor) {
+        vehicleColor.textContent =
+            vehicle.color;
+    }
+
+
+    /* ---------------------------------------------
+       INFORMASI UNIT
+    --------------------------------------------- */
+
+    const vehicleModel =
+        document.getElementById("vehicle-model");
+
+    const vehicleYear =
+        document.getElementById("vehicle-year");
+
+    const vehicleType =
+        document.getElementById("vehicle-type");
+
+    const vehicleInformationColor =
+        document.getElementById(
+            "vehicle-information-color"
+        );
+
+    const vehicleCondition =
+        document.getElementById("vehicle-condition");
+
+    const vehicleShowroom =
+        document.getElementById("vehicle-showroom");
+
+
+    if (vehicleModel) {
+        vehicleModel.textContent =
+            vehicle.brand + " " + vehicle.model;
+    }
+
+    if (vehicleYear) {
+        vehicleYear.textContent =
+            vehicle.year;
+    }
+
+    if (vehicleType) {
+        vehicleType.textContent =
+            vehicle.type;
+    }
+
+    if (vehicleInformationColor) {
+        vehicleInformationColor.textContent =
+            vehicle.color;
+    }
+
+    if (vehicleCondition) {
+        vehicleCondition.textContent =
+            vehicle.condition;
+    }
+
+    if (vehicleShowroom) {
+        vehicleShowroom.textContent =
+            vehicle.showroom;
+    }
+
+}
+
+/* =====================================================
+   LOAD SIMULATION PAGE
+===================================================== */
+
+function loadSimulationPage() {
+
+    const params = new URLSearchParams(
+        window.location.search
+    );
+
+    const vehicleKey = params.get("vehicle");
+
+    const vehicle = vehicleData[vehicleKey];
+
+    if (!vehicle) {
+        return;
+    }
+
+
+    /* =========================================
+       VEHICLE INFORMATION
+    ========================================= */
+
+    const vehicleName =
+        document.getElementById("simulation-vehicle-name");
+
+    const vehiclePrice =
+        document.getElementById("simulation-vehicle-price");
+
+    const vehicleShowroom =
+        document.getElementById("simulation-vehicle-showroom");
+
+    const vehicleBrand =
+        document.getElementById("simulation-brand");
+
+    const vehicleModel =
+        document.getElementById("simulation-model");
+
+    const vehicleType =
+        document.getElementById("simulation-type");
+
+    const vehicleYear =
+        document.getElementById("simulation-year");
+
+    const vehicleMileage =
+        document.getElementById("simulation-vehicle-mileage");
+
+    const vehicleTransmission =
+        document.getElementById(
+            "simulation-vehicle-transmission"
+        );
+
+    const vehicleFuel =
+        document.getElementById(
+            "simulation-vehicle-fuel"
+        );
+
+    const vehicleColor =
+        document.getElementById("simulation-color");
+
+    const otrInput =
+        document.getElementById("simulation-otr");
+
+
+    if (vehicleName) {
+        vehicleName.textContent = vehicle.name;
+    }
+
+    if (vehiclePrice) {
+        vehiclePrice.textContent = vehicle.price;
+    }
+
+    if (vehicleShowroom) {
+        vehicleShowroom.textContent = vehicle.showroom;
+    }
+
+    if (vehicleBrand) {
+        vehicleBrand.textContent = vehicle.brand;
+    }
+
+    if (vehicleModel) {
+        vehicleModel.textContent = vehicle.model;
+    }
+
+    if (vehicleType) {
+        vehicleType.textContent = vehicle.type;
+    }
+
+    if (vehicleYear) {
+        vehicleYear.textContent = vehicle.year;
+    }
+
+    if (vehicleMileage) {
+        vehicleMileage.textContent = vehicle.mileage;
+    }
+
+    if (vehicleTransmission) {
+        vehicleTransmission.textContent =
+            vehicle.transmission;
+    }
+
+    if (vehicleFuel) {
+        vehicleFuel.textContent = vehicle.fuel;
+    }
+
+    if (vehicleColor) {
+        vehicleColor.textContent = vehicle.color;
+    }
+
+
+    /* =========================================
+       PRICE
+    ========================================= */
+
+    const vehiclePriceNumber =
+        parseVehiclePrice(vehicle.price);
+
+    if (otrInput) {
+        otrInput.value =
+            formatRupiah(vehiclePriceNumber);
+    }
+
+
+    /* =========================================
+       DP
+    ========================================= */
+
+    const dpInput =
+        document.getElementById("dp");
+
+    if (dpInput) {
+
+        dpInput.addEventListener(
+            "input",
+            updateNewSimulationPreview
+        );
+
+    }
+
+
+    /* =========================================
+       TENOR
+    ========================================= */
+
+    const tenorInput =
+        document.getElementById("tenor");
+
+    if (tenorInput) {
+
+        tenorInput.addEventListener(
+            "change",
+            updateNewSimulationPreview
+        );
+
+    }
+
+
+    /* =========================================
+       INITIAL PREVIEW
+    ========================================= */
+
+    updateNewSimulationPreview();
+
+
+    /* =========================================
+       BACK TO DETAIL
+    ========================================= */
+
+    const backToDetail =
+        document.getElementById("back-to-detail");
+
+    if (backToDetail) {
+
+        backToDetail.href =
+            "detail-unit.html?vehicle=" +
+            encodeURIComponent(vehicleKey);
+
+    }
+
+
+    /* =========================================
+       STORE CURRENT VEHICLE
+    ========================================= */
+
+    localStorage.setItem(
+        "tafSimulationVehicle",
+        vehicleKey
+    );
+
+}
+
+function parseVehiclePrice(price) {
+
+    if (typeof price === "number") {
+        return price;
+    }
+
+    return Number(
+        String(price)
+            .replace(/Rp/g, "")
+            .replace(/\./g, "")
+            .replace(/,/g, "")
+            .trim()
+    ) || 0;
+
+}
+
+
+function formatRupiah(number) {
+
+    return "Rp " +
+        Number(number || 0).toLocaleString(
+            "id-ID"
+        );
+
+}
+
+
+function updateNewSimulationPreview() {
+
+    const vehicleKey =
+        localStorage.getItem(
+            "tafSimulationVehicle"
+        );
+
+    if (!vehicleKey) {
+        return;
+    }
+
+    const vehicle =
+        vehicleData[vehicleKey];
+
+    if (!vehicle) {
+        return;
+    }
+
+
+    const vehiclePrice =
+        parseVehiclePrice(vehicle.price);
+
+
+    const dpInput =
+        document.getElementById("dp");
+
+    const dpPercentage =
+        Number(
+            dpInput ? dpInput.value : 20
+        ) || 20;
+
+
+    const dpAmount =
+        vehiclePrice *
+        (dpPercentage / 100);
+
+
+    const financing =
+        vehiclePrice -
+        dpAmount;
+
+
+    const dpRupiah =
+        document.getElementById(
+            "dp-rupiah"
+        );
+
+    const previewFinancing =
+        document.getElementById(
+            "preview-financing"
+        );
+
+
+    if (dpRupiah) {
+
+        dpRupiah.value =
+            formatRupiah(dpAmount);
+
+    }
+
+
+    if (previewFinancing) {
+
+        previewFinancing.textContent =
+            formatRupiah(financing);
+
+    }
+
+}
+
+/* =====================================================
+   UPDATE SIMULATION PREVIEW
+===================================================== */
+
+function updateSimulationPreview() {
+
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const vehicleKey =
+        params.get("vehicle");
+
+    const vehicle =
+        vehicleData[vehicleKey];
+
+
+    if (!vehicle) {
+        return;
+    }
+
+
+    const dpInput =
+        document.getElementById("dp");
+
+    const previewDp =
+        document.getElementById("preview-dp");
+
+    const previewFinancing =
+        document.getElementById(
+            "preview-financing"
+        );
+
+
+    if (!dpInput) {
+        return;
+    }
+
+
+    const dpPercentage =
+        Number(dpInput.value);
+
+
+    const vehiclePrice =
+        parseInt(
+            vehicle.price
+                .replace("Rp", "")
+                .replace(/\./g, "")
+                .trim()
+        );
+
+
+    const dpAmount =
+        vehiclePrice *
+        (dpPercentage / 100);
+
+
+    const financingAmount =
+        vehiclePrice -
+        dpAmount;
+
+
+    if (previewDp) {
+
+        previewDp.textContent =
+            formatRupiah(dpAmount);
+
+    }
+
+
+    if (previewFinancing) {
+
+        previewFinancing.textContent =
+            formatRupiah(financingAmount);
+
+    }
+
+}
+
+/* =====================================================
+   FORMAT RUPIAH
+===================================================== */
+
+function formatRupiah(number) {
+
+    return "Rp " +
+        Math.round(number)
+            .toLocaleString("id-ID");
+
+}
+
+/* =====================================================
+   SUBMIT SIMULATION
+===================================================== */
+
+function submitSimulation() {
+
+    const vehicleKey =
+        localStorage.getItem("tafSimulationVehicle");
+
+    if (!vehicleKey) {
+
+        alert("Unit kendaraan tidak ditemukan.");
+        return;
+
+    }
+
+
+    const vehicle =
+        vehicleData[vehicleKey];
+
+    if (!vehicle) {
+
+        alert("Data kendaraan tidak ditemukan.");
+        return;
+
+    }
+
+
+    const dpInput =
+        document.getElementById("dp");
+
+    const tenorInput =
+        document.getElementById("tenor");
+
+    const insuranceInput =
+        document.getElementById("insurance");
+
+    const branchInput =
+        document.getElementById("branch");
+
+
+    const dp =
+        Number(
+            dpInput ? dpInput.value : 20
+        );
+
+
+    const tenor =
+        Number(
+            tenorInput ? tenorInput.value : 60
+        );
+
+
+    const insurance =
+        insuranceInput
+            ? insuranceInput.value
+            : "";
+
+
+    const branch =
+        branchInput
+            ? branchInput.value
+            : "";
+
+
+    /* =========================================
+       VALIDATION
+    ========================================= */
+
+    if (dp < 15) {
+
+        alert(
+            "Uang muka minimum 15%."
+        );
+
+        return;
+
+    }
+
+
+    if (!insurance) {
+
+        alert(
+            "Silakan pilih jenis asuransi."
+        );
+
+        return;
+
+    }
+
+
+    if (!branch) {
+
+        alert(
+            "Silakan pilih Branch TAF."
+        );
+
+        return;
+
+    }
+
+
+    /* =========================================
+       BASIC CALCULATION
+    ========================================= */
+
+    const vehiclePrice =
+        parseVehiclePrice(
+            vehicle.price
+        );
+
+
+    const dpAmount =
+        vehiclePrice *
+        (dp / 100);
+
+
+    const financing =
+        vehiclePrice -
+        dpAmount;
+
+
+    /* =========================================
+       INSURANCE
+    ========================================= */
+
+    const insuranceResult =
+        calculateInsurancePremium(
+            vehiclePrice,
+            tenor,
+            insurance
+        );
+
+
+    const insurancePremium =
+        insuranceResult.premium;
+
+
+    /* =========================================
+       PH
+    ========================================= */
+
+    const ph =
+        financing +
+        insurancePremium;
+
+
+    /* =========================================
+       PROTOTYPE INTEREST
+    ========================================= */
+
+    /*
+     * Prototype estimation only.
+     * Bukan bunga resmi TAF.
+     */
+
+    const estimatedRate =
+        0.08;
+
+
+    const estimatedInterest =
+        ph *
+        estimatedRate *
+        (tenor / 12);
+
+
+    /* =========================================
+       TOTAL AR
+    ========================================= */
+
+    const estimatedTotal =
+        ph +
+        estimatedInterest;
+
+
+    /* =========================================
+       INSTALLMENT
+    ========================================= */
+
+    const estimatedInstallment =
+        estimatedTotal /
+        tenor;
+
+
+    /* =========================================
+       TDP
+    ========================================= */
+
+    /*
+     * Prototype:
+     * Untuk sementara TDP = DP.
+     *
+     * Biaya lain belum dimasukkan karena
+     * belum ada sumber data resmi pada prototype.
+     */
+
+    const tdp =
+        dpAmount;
+
+
+    /* =========================================
+       SIMULATION DATA
+    ========================================= */
+
+    const simulationData = {
+
+        vehicle: vehicleKey,
+
+        vehicleName: vehicle.name,
+
+        vehiclePrice: vehiclePrice,
+
+        brand: vehicle.brand,
+
+        model: vehicle.model,
+
+        type: vehicle.type,
+
+        year: vehicle.year,
+
+        mileage: vehicle.mileage,
+
+        transmission: vehicle.transmission,
+
+        fuel: vehicle.fuel,
+
+        color: vehicle.color,
+
+        showroom: vehicle.showroom,
+
+        dpPercentage: dp,
+
+        dpAmount: dpAmount,
+
+        tenor: tenor,
+
+        insurance: insurance,
+
+        insuranceProvider:
+            "Asuransi Astra",
+
+        insuranceCoverage:
+            insuranceResult.coverage,
+
+        insuranceRate:
+            insuranceResult.rate,
+
+        insurancePremium:
+            insurancePremium,
+
+        branch: branch,
+
+        financing: financing,
+
+        ph: ph,
+
+        tdp: tdp,
+
+        estimatedRate:
+            estimatedRate,
+
+        estimatedInterest:
+            estimatedInterest,
+
+        estimatedTotal:
+            estimatedTotal,
+
+        estimatedInstallment:
+            estimatedInstallment,
+
+        createdAt:
+            new Date().toISOString()
+
+    };
+
+
+    /* =========================================
+       SAVE SIMULATION
+    ========================================= */
+
+    localStorage.setItem(
+        "tafSimulation",
+        JSON.stringify(
+            simulationData
+        )
+    );
+
+
+    /* =========================================
+       GO TO RESULT
+    ========================================= */
+
+    window.location.href =
+        "hasil-simulasi.html";
+
+}
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function toggleMenu() {
+
+    const navigation =
+        document.getElementById("navigation");
+
+
+    if (!navigation) {
+        return;
+    }
+
+
+    navigation.classList.toggle("show");
+
+}
+
+function toggleMobileMenu() {
+    const navigation = document.querySelector(".navigation");
+
+    if (navigation) {
+        navigation.classList.toggle("show");
+    }
+}
+
+/* =====================================================
+   CATEGORY FILTER
+===================================================== */
+
+function filterCategory(category, button) {
+
+    const cards =
+        document.querySelectorAll(".vehicle-card");
+
+    const buttons =
+        document.querySelectorAll(".category");
+
+    const emptyState =
+        document.getElementById("emptyState");
+
+    let visibleCount = 0;
+
+
+    /* ---------------------------------------------
+       RESET ACTIVE CATEGORY
+    --------------------------------------------- */
+
+    buttons.forEach(function(item) {
+
+        item.classList.remove("active");
+
+    });
+
+
+    if (button) {
+
+        button.classList.add("active");
+
+    }
+
+
+    /* ---------------------------------------------
+       FILTER VEHICLE
+    --------------------------------------------- */
+
+    cards.forEach(function(card) {
+
+        const cardCategory =
+            card.dataset.category;
+
+
+        if (
+            category === "Semua" ||
+            cardCategory === category
+        ) {
+
+            card.style.display = "";
+
+            visibleCount++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    /* ---------------------------------------------
+       EMPTY STATE
+    --------------------------------------------- */
+
+    if (!emptyState) {
+        return;
+    }
+
+
+    if (visibleCount === 0) {
+
+        emptyState.style.display =
+            "block";
+
+    } else {
+
+        emptyState.style.display =
+            "none";
+
+    }
+
+}
+
+
+/* =====================================================
+   SEARCH VEHICLE
+===================================================== */
+
+function searchVehicle() {
+
+    const input =
+        document.getElementById("searchInput");
+
+    const cards =
+        document.querySelectorAll(".vehicle-card");
+
+    const emptyState =
+        document.getElementById("emptyState");
+
+
+    if (!input) {
+        return;
+    }
+
+
+    const keyword =
+        input.value
+            .toLowerCase()
+            .trim();
+
+
+    let visibleCount = 0;
+
+
+    cards.forEach(function(card) {
+
+        const name =
+            card.dataset.name
+                ? card.dataset.name.toLowerCase()
+                : "";
+
+
+        if (
+            name.includes(keyword) ||
+            keyword === ""
+        ) {
+
+            card.style.display = "";
+
+            visibleCount++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    if (!emptyState) {
+        return;
+    }
+
+
+    if (visibleCount === 0) {
+
+        emptyState.style.display =
+            "block";
+
+    } else {
+
+        emptyState.style.display =
+            "none";
+
+    }
+
+}
+
+
+/* =====================================================
+   VEHICLE DETAIL
+===================================================== */
+
+function openDetail(vehicleName) {
+
+    console.log(
+        "Detail kendaraan:",
+        vehicleName
+    );
+
+}
+
+
+/* =====================================================
+   FAVORITE VEHICLE
+===================================================== */
+
+function toggleFavorite(button) {
+
+    if (!button) {
+        return;
+    }
+
+
+    button.classList.toggle(
+        "favorite-active"
+    );
+
+
+    const isFavorite =
+        button.classList.contains(
+            "favorite-active"
+        );
+
+
+    if (isFavorite) {
+
+        button.textContent = "♥";
+
+        button.setAttribute(
+            "aria-label",
+            "Hapus dari favorit"
+        );
+
+    } else {
+
+        button.textContent = "♡";
+
+        button.setAttribute(
+            "aria-label",
+            "Tambahkan ke favorit"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   CHANGE MAIN IMAGE
+===================================================== */
+
+function changeMainImage(imageNumber) {
+
+    const thumbnails =
+        document.querySelectorAll(
+            ".thumbnail"
+        );
+
+
+    if (!thumbnails.length) {
+        return;
+    }
+
+
+    /* ---------------------------------------------
+       RESET ACTIVE THUMBNAIL
+    --------------------------------------------- */
+
+    thumbnails.forEach(function(thumbnail) {
+
+        thumbnail.classList.remove(
+            "active"
+        );
+
+    });
+
+
+    /* ---------------------------------------------
+       ACTIVE THUMBNAIL
+    --------------------------------------------- */
+
+    const selectedThumbnail =
+        thumbnails[imageNumber - 1];
+
+
+    if (selectedThumbnail) {
+
+        selectedThumbnail.classList.add(
+            "active"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   CONTACT SHOWROOM
+===================================================== */
+
+function contactShowroom() {
+
+    alert(
+        "Fitur Hubungi Showroom masih berupa prototype.\n\n" +
+        "Pada tahap berikutnya, inquiry customer dapat " +
+        "diteruskan menjadi TAF Lead untuk proses follow up."
+    );
+
+}
+
+
+/* =====================================================
+   SIMULATION
+===================================================== */
+
+function startSimulation() {
+
+    alert(
+        "Halaman Ajukan Simulasi akan kita bangun " +
+        "pada tahap berikutnya."
+    );
+
+}
+
+/* =====================================================
+   SET SIMULATION LINK FROM DETAIL PAGE
+===================================================== */
+
+function setupSimulationLink() {
+
+    const simulationLink =
+        document.getElementById(
+            "simulation-link"
+        );
+
+    if (!simulationLink) {
+        return;
+    }
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const vehicleKey =
+        params.get("vehicle");
+
+    if (!vehicleKey) {
+        return;
+    }
+
+    /*
+     * Simpan kendaraan yang sedang dipilih.
+     *
+     * tafSimulationVehicle
+     * = hanya menyimpan KEY kendaraan
+     * contoh: "avanza"
+     */
+
+    localStorage.setItem(
+        "tafSimulationVehicle",
+        vehicleKey
+    );
+
+    simulationLink.href =
+        "simulasi.html?vehicle=" +
+        encodeURIComponent(
+            vehicleKey
+        );
+}
+
+
+/* =====================================================
+   PARSE VEHICLE PRICE
+===================================================== */
+
+function parseVehiclePrice(price) {
+
+    if (typeof price === "number") {
+        return price;
+    }
+
+    return Number(
+        String(price)
+            .replace(/Rp/g, "")
+            .replace(/\./g, "")
+            .replace(/,/g, "")
+            .trim()
+    ) || 0;
+}
+
+
+/* =====================================================
+   FORMAT RUPIAH
+===================================================== */
+
+function formatRupiah(number) {
+
+    return "Rp " +
+        Math.round(
+            Number(number) || 0
+        ).toLocaleString("id-ID");
+
+}
+
+
+/* =====================================================
+   UPDATE SIMULATION PREVIEW
+===================================================== */
+
+function updateNewSimulationPreview() {
+
+    const vehicleKey =
+        localStorage.getItem(
+            "tafSimulationVehicle"
+        );
+
+    if (!vehicleKey) {
+        return;
+    }
+
+    const vehicle =
+        vehicleData[vehicleKey];
+
+    if (!vehicle) {
+        return;
+    }
+
+
+    const vehiclePrice =
+        parseVehiclePrice(
+            vehicle.price
+        );
+
+
+    const dpInput =
+        document.getElementById("dp");
+
+
+    const dpPercentage =
+        Number(
+            dpInput
+                ? dpInput.value
+                : 20
+        ) || 20;
+
+
+    const dpAmount =
+        vehiclePrice *
+        (dpPercentage / 100);
+
+
+    const financing =
+        vehiclePrice -
+        dpAmount;
+
+
+    const dpRupiah =
+        document.getElementById(
+            "dp-rupiah"
+        );
+
+
+    const previewDp =
+        document.getElementById(
+            "preview-dp"
+        );
+
+
+    const previewFinancing =
+        document.getElementById(
+            "preview-financing"
+        );
+
+
+    if (dpRupiah) {
+
+        dpRupiah.value =
+            formatRupiah(
+                dpAmount
+            );
+
+    }
+
+
+    if (previewDp) {
+
+        previewDp.textContent =
+            formatRupiah(
+                dpAmount
+            );
+
+    }
+
+
+    if (previewFinancing) {
+
+        previewFinancing.textContent =
+            formatRupiah(
+                financing
+            );
+
+    }
+
+}
+
+
+/* =====================================================
+   INSURANCE PROTOTYPE
+===================================================== */
+
+/*
+ * CATATAN:
+ * Rate di bawah adalah rate PROTOTYPE,
+ * bukan rate resmi TAF / Asuransi Astra.
+ *
+ * Rate resmi dapat diganti kemudian
+ * apabila sudah tersedia sumber resmi.
+ */
+
+const simulationInsuranceRate = {
+
+    comprehensive: {
+
+        12: 0.0255,
+        24: 0.0297,
+        36: 0.0297,
+        48: 0.0297,
+        60: 0.0297
+
+    },
+
+    tlo: {
+
+        12: 0.0084,
+        24: 0.0102,
+        36: 0.0102,
+        48: 0.0102,
+        60: 0.0102
+
+    }
+
+};
+
+
+const simulationDepreciation = {
+
+    12: 1.00,
+    24: 0.80,
+    36: 0.80,
+    48: 0.70,
+    60: 0.70
+
+};
+
+
+/* =====================================================
+   GET INSURANCE RATE
+===================================================== */
+
+function getInsuranceRate(
+    insuranceType,
+    tenor
+) {
+
+    if (
+        simulationInsuranceRate[
+            insuranceType
+        ] &&
+        simulationInsuranceRate[
+            insuranceType
+        ][tenor]
+    ) {
+
+        return simulationInsuranceRate[
+            insuranceType
+        ][tenor];
+
+    }
+
+    return 0;
+
+}
+
+
+/* =====================================================
+   CALCULATE INSURANCE COVERAGE
+===================================================== */
+
+function calculateInsuranceCoverage(
+    otrNett,
+    tenor
+) {
+
+    const factor =
+        simulationDepreciation[
+            tenor
+        ] || 1;
+
+    return (
+        otrNett *
+        factor
+    );
+
+}
+
+
+/* =====================================================
+   CALCULATE INSURANCE PREMIUM
+===================================================== */
+
+function calculateInsurancePremium(
+    otrNett,
+    tenor,
+    insuranceType
+) {
+
+    const coverage =
+        calculateInsuranceCoverage(
+            otrNett,
+            tenor
+        );
+
+
+    /* =========================================
+       COMPREHENSIVE
+    ========================================= */
+
+    if (
+        insuranceType ===
+        "comprehensive"
+    ) {
+
+        const rate =
+            getInsuranceRate(
+                "comprehensive",
+                tenor
+            );
+
+        return {
+
+            coverage:
+                coverage,
+
+            rate:
+                rate,
+
+            premium:
+                coverage * rate
+
+        };
+
+    }
+
+
+    /* =========================================
+       TLO
+    ========================================= */
+
+    if (
+        insuranceType ===
+        "tlo"
+    ) {
+
+        const rate =
+            getInsuranceRate(
+                "tlo",
+                tenor
+            );
+
+        return {
+
+            coverage:
+                coverage,
+
+            rate:
+                rate,
+
+            premium:
+                coverage * rate
+
+        };
+
+    }
+
+
+    /* =========================================
+       COMBINE
+    ========================================= */
+
+    if (
+        insuranceType ===
+        "combine"
+    ) {
+
+        const comprehensiveRate =
+            getInsuranceRate(
+                "comprehensive",
+                12
+            );
+
+
+        const tloRate =
+            getInsuranceRate(
+                "tlo",
+                tenor
+            );
+
+
+        const firstYearCoverage =
+            calculateInsuranceCoverage(
+                otrNett,
+                12
+            );
+
+
+        const remainingCoverage =
+            calculateInsuranceCoverage(
+                otrNett,
+                tenor
+            );
+
+
+        const firstYearPremium =
+            firstYearCoverage *
+            comprehensiveRate;
+
+
+        const remainingPremium =
+            remainingCoverage *
+            tloRate;
+
+
+        return {
+
+            coverage:
+                firstYearCoverage,
+
+            rate:
+                comprehensiveRate,
+
+            premium:
+                firstYearPremium +
+                remainingPremium
+
+        };
+
+    }
+
+
+    return {
+
+        coverage: 0,
+
+        rate: 0,
+
+        premium: 0
+
+    };
+
+}
+
+/* =====================================================
+   LOAD SIMULATION RESULT
+===================================================== */
+
+function loadSimulationResult() {
+
+    /*
+     * HASIL SIMULASI HARUS MENGAMBIL
+     * tafSimulation
+     *
+     * BUKAN tafSimulationVehicle.
+     */
+
+    const storedSimulation =
+        localStorage.getItem(
+            "tafSimulation"
+        );
+
+
+    if (!storedSimulation) {
+
+        console.warn(
+            "Data simulasi belum tersedia."
+        );
+
+        return;
+
+    }
+
+
+    let simulation;
+
+
+    try {
+
+        simulation =
+            JSON.parse(
+                storedSimulation
+            );
+
+    } catch (error) {
+
+        console.error(
+            "Data simulasi tidak dapat dibaca:",
+            error
+        );
+
+        return;
+
+    }
+
+
+    if (
+        !simulation ||
+        typeof simulation !== "object"
+    ) {
+
+        console.error(
+            "Format data simulasi tidak valid."
+        );
+
+        return;
+
+    }
+
+
+    const vehicleKey =
+        simulation.vehicle;
+
+
+    const vehicle =
+        vehicleData[vehicleKey];
+
+
+    if (!vehicle) {
+
+        console.error(
+            "Data kendaraan tidak ditemukan:",
+            vehicleKey
+        );
+
+        return;
+
+    }
+
+
+    /* =========================================
+       VEHICLE INFORMATION
+    ========================================= */
+
+    const vehicleName =
+        document.getElementById(
+            "result-vehicle-name"
+        );
+
+
+    const vehiclePriceElement =
+        document.getElementById(
+            "result-vehicle-price"
+        );
+
+
+    const vehicleMileage =
+        document.getElementById(
+            "result-vehicle-mileage"
+        );
+
+
+    const vehicleTransmission =
+        document.getElementById(
+            "result-vehicle-transmission"
+        );
+
+
+    const vehicleFuel =
+        document.getElementById(
+            "result-vehicle-fuel"
+        );
+
+
+    if (vehicleName) {
+
+        vehicleName.textContent =
+            vehicle.name;
+
+    }
+
+
+    if (vehiclePriceElement) {
+
+        vehiclePriceElement.textContent =
+            formatRupiah(
+                simulation.vehiclePrice
+            );
+
+    }
+
+
+    if (vehicleMileage) {
+
+        vehicleMileage.textContent =
+            vehicle.mileage;
+
+    }
+
+
+    if (vehicleTransmission) {
+
+        vehicleTransmission.textContent =
+            vehicle.transmission;
+
+    }
+
+
+    if (vehicleFuel) {
+
+        vehicleFuel.textContent =
+            vehicle.fuel;
+
+    }
+
+
+    /* =========================================
+       BASIC RESULT
+    ========================================= */
+
+    const resultPrice =
+        document.getElementById(
+            "result-price"
+        );
+
+
+    const resultDp =
+        document.getElementById(
+            "result-dp"
+        );
+
+
+    const resultFinancing =
+        document.getElementById(
+            "result-financing-detail"
+        );
+
+
+    const resultTenor =
+        document.getElementById(
+            "result-tenor"
+        );
+
+
+    if (resultPrice) {
+
+        resultPrice.textContent =
+            formatRupiah(
+                simulation.vehiclePrice
+            );
+
+    }
+
+
+    if (resultDp) {
+
+        resultDp.textContent =
+            formatRupiah(
+                simulation.dpAmount
+            );
+
+    }
+
+
+    if (resultFinancing) {
+
+        resultFinancing.textContent =
+            formatRupiah(
+                simulation.financing
+            );
+
+    }
+
+
+    if (resultTenor) {
+
+        resultTenor.textContent =
+            simulation.tenor +
+            " Bulan";
+
+    }
+
+
+    /* =========================================
+       PH
+    ========================================= */
+
+    const resultPh =
+        document.getElementById(
+            "result-ph"
+        );
+
+
+    if (resultPh) {
+
+        resultPh.textContent =
+            formatRupiah(
+                simulation.ph
+            );
+
+    }
+
+
+    /* =========================================
+       TDP
+    ========================================= */
+
+    const resultTdp =
+        document.getElementById(
+            "result-tdp"
+        );
+
+
+    if (resultTdp) {
+
+        resultTdp.textContent =
+            formatRupiah(
+                simulation.tdp
+            );
+
+    }
+
+
+    /* =========================================
+       INTEREST
+    ========================================= */
+
+    const resultInterest =
+        document.getElementById(
+            "result-interest"
+        );
+
+
+    if (resultInterest) {
+
+        resultInterest.textContent =
+            (
+                simulation.estimatedRate *
+                100
+            ).toFixed(2) +
+            "% Estimasi";
+
+    }
+
+
+    /* =========================================
+       INSURANCE
+    ========================================= */
+
+    const resultInsurance =
+        document.getElementById(
+            "result-insurance"
+        );
+
+
+    if (resultInsurance) {
+
+        let insuranceName =
+            simulation.insurance;
+
+
+        if (
+            simulation.insurance ===
+            "comprehensive"
+        ) {
+
+            insuranceName =
+                "Comprehensive";
+
+        }
+
+
+        if (
+            simulation.insurance ===
+            "combine"
+        ) {
+
+            insuranceName =
+                "Combine";
+
+        }
+
+
+        if (
+            simulation.insurance ===
+            "tlo"
+        ) {
+
+            insuranceName =
+                "TLO";
+
+        }
+
+
+        resultInsurance.textContent =
+            insuranceName +
+            " - " +
+            (
+                simulation.insuranceProvider ||
+                "Asuransi Astra"
+            );
+
+    }
+
+
+    /* =========================================
+       INSTALLMENT
+    ========================================= */
+
+    const resultInstallment =
+        document.getElementById(
+            "result-installment"
+        );
+
+
+    if (resultInstallment) {
+
+        resultInstallment.textContent =
+            formatRupiah(
+                simulation.estimatedInstallment
+            ) +
+            " / bulan";
+
+    }
+
+
+    /* =========================================
+       BACK TO SIMULATION
+    ========================================= */
+
+    const backToSimulation =
+        document.getElementById(
+            "back-to-simulation"
+        );
+
+
+    if (backToSimulation) {
+
+        backToSimulation.href =
+            "simulasi.html?vehicle=" +
+            encodeURIComponent(
+                vehicleKey
+            );
+
+    }
+
+
+    /* =========================================
+       CHANGE SIMULATION
+    ========================================= */
+
+    const changeSimulation =
+        document.getElementById(
+            "change-simulation"
+        );
+
+
+    if (changeSimulation) {
+
+        changeSimulation.href =
+            "simulasi.html?vehicle=" +
+            encodeURIComponent(
+                vehicleKey
+            );
+
+    }
+
+}
+
+function submitLead() {
+
+    const storedSimulation =
+        localStorage.getItem("tafSimulation");
+
+    if (!storedSimulation) {
+
+        alert("Data simulasi tidak ditemukan.");
+        return;
+
+    }
+
+    let simulation;
+
+    try {
+
+        simulation =
+            JSON.parse(storedSimulation);
+
+    } catch (error) {
+
+        console.error(
+            "Data simulasi tidak dapat dibaca:",
+            error
+        );
+
+        alert("Data simulasi tidak valid.");
+        return;
+
+    }
+
+    if (
+        !simulation ||
+        typeof simulation !== "object"
+    ) {
+
+        alert("Data simulasi tidak valid.");
+        return;
+
+    }
+
+    if (!simulation.vehicle) {
+
+        alert("Unit kendaraan tidak ditemukan.");
+        return;
+
+    }
+
+    console.log(
+        "Data simulasi sebelum lanjut:",
+        simulation
+    );
+
+    window.location.href =
+        "customer-info.html";
+}
+
+function loadCustomerInfo() {
+
+    const storedSimulation =
+        localStorage.getItem("tafSimulation");
+
+    if (!storedSimulation) {
+        alert("Data simulasi tidak ditemukan.");
+        window.location.href = "index.html";
+        return;
+    }
+
+    let simulation;
+
+    try {
+        simulation = JSON.parse(storedSimulation);
+    } catch (error) {
+        console.error(
+            "Data simulasi tidak dapat dibaca:",
+            error
+        );
+
+        alert("Data simulasi tidak valid.");
+        return;
+    }
+
+    const vehicle =
+        vehicleData[simulation.vehicle];
+
+    if (!vehicle) {
+        alert("Data kendaraan tidak ditemukan.");
+        return;
+    }
+
+
+    /* ===============================
+       TAMPILKAN DATA UNIT
+    =============================== */
+
+    const vehicleName =
+        document.getElementById(
+            "customer-vehicle-name"
+        );
+
+    const vehiclePrice =
+        document.getElementById(
+            "customer-vehicle-price"
+        );
+
+    const customerDp =
+        document.getElementById(
+            "customer-dp"
+        );
+
+    const customerTenor =
+        document.getElementById(
+            "customer-tenor"
+        );
+
+
+    if (vehicleName) {
+        vehicleName.textContent =
+            vehicle.name;
+    }
+
+    if (vehiclePrice) {
+        vehiclePrice.textContent =
+            formatRupiah(
+                simulation.vehiclePrice
+            );
+    }
+
+    if (customerDp) {
+        customerDp.textContent =
+            formatRupiah(
+                simulation.dpAmount
+            );
+    }
+
+    if (customerTenor) {
+        customerTenor.textContent =
+            simulation.tenor + " Bulan";
+    }
+
+
+    /* ===============================
+       BACK BUTTON
+    =============================== */
+
+    const backToResult =
+        document.getElementById(
+            "back-to-result"
+        );
+
+    if (backToResult) {
+        backToResult.href =
+            "hasil-simulasi.html";
+    }
+
+
+    /* ===============================
+       ISI CABANG OTOMATIS
+    =============================== */
+
+    const branchInput =
+        document.getElementById(
+            "customer-branch"
+        );
+
+    if (
+        branchInput &&
+        simulation.branch
+    ) {
+        branchInput.value =
+            simulation.branch;
+    }
+
+
+    /* ===============================
+       FORM CUSTOMER
+    =============================== */
+
+    const customerForm =
+        document.getElementById(
+            "customer-form"
+        );
+
+    if (!customerForm) {
+        console.error(
+            "Form #customer-form tidak ditemukan."
+        );
+        return;
+    }
+
+
+    customerForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            /* ===============================
+               AMBIL DATA CUSTOMER
+            =============================== */
+
+            const name =
+                document.getElementById(
+                    "customer-name"
+                ).value.trim();
+
+            const phone =
+                document.getElementById(
+                    "customer-phone"
+                ).value.trim();
+
+            const email =
+                document.getElementById(
+                    "customer-email"
+                ).value.trim();
+
+            const city =
+                document.getElementById(
+                    "customer-city"
+                ).value;
+
+            const branch =
+                document.getElementById(
+                    "customer-branch"
+                ).value;
+
+            const purpose =
+                document.getElementById(
+                    "customer-purpose"
+                ).value;
+
+            const consent =
+                document.getElementById(
+                    "customer-consent"
+                ).checked;
+
+
+            /* ===============================
+               VALIDASI
+            =============================== */
+
+            if (!name) {
+                alert(
+                    "Silakan isi nama lengkap."
+                );
+                return;
+            }
+
+            if (!phone) {
+                alert(
+                    "Silakan isi nomor WhatsApp."
+                );
+                return;
+            }
+
+            if (!city) {
+                alert(
+                    "Silakan pilih kota domisili."
+                );
+                return;
+            }
+
+            if (!branch) {
+                alert(
+                    "Silakan pilih cabang TAF."
+                );
+                return;
+            }
+
+            if (!purpose) {
+                alert(
+                    "Silakan pilih kebutuhan."
+                );
+                return;
+            }
+
+            if (!consent) {
+                alert(
+                    "Silakan setujui bahwa TAF dapat menghubungi kamu."
+                );
+                return;
+            }
+
+
+            /* ===============================
+               BUAT LEAD
+            =============================== */
+
+            const leadData = {
+
+                id:
+                    "LEAD-" +
+                    Date.now(),
+
+                vehicle:
+                    simulation.vehicle,
+
+                vehicleName:
+                    vehicle.name,
+
+                vehiclePrice:
+                    simulation.vehiclePrice,
+
+                showroom:
+                    vehicle.showroom,
+
+                dp:
+                    simulation.dpPercentage,
+
+                dpAmount:
+                    simulation.dpAmount,
+
+                tenor:
+                    simulation.tenor,
+
+                insurance:
+                    simulation.insurance,
+
+                insuranceProvider:
+                    simulation.insuranceProvider,
+
+                insuranceCoverage:
+                    simulation.insuranceCoverage,
+
+                insurancePremium:
+                    simulation.insurancePremium,
+
+                financing:
+                    simulation.financing,
+
+                ph:
+                    simulation.ph,
+
+                estimatedInterest:
+                    simulation.estimatedInterest,
+
+                estimatedTotal:
+                    simulation.estimatedTotal,
+
+                estimatedInstallment:
+                    simulation.estimatedInstallment,
+
+                branch:
+                    branch,
+
+                customerName:
+                    name,
+
+                customerPhone:
+                    phone,
+
+                customerEmail:
+                    email,
+
+                customerCity:
+                    city,
+
+                customerBranch:
+                    branch,
+
+                customerPurpose:
+                    purpose,
+
+                status:
+                    "New Lead",
+
+                createdAt:
+                    new Date().toISOString(),
+
+                lastFollowup:
+                    null,
+
+                nextAction:
+                    "Initial follow-up",
+
+                followupNote:
+                    ""
+
+            };
+
+
+            /* ===============================
+               SIMPAN LEAD
+            =============================== */
+
+            const storedLeads =
+                localStorage.getItem(
+                    "tafLeads"
+                );
+
+            let leads = [];
+
+            if (storedLeads) {
+
+                try {
+
+                    leads =
+                        JSON.parse(
+                            storedLeads
+                        );
+
+                    if (
+                        !Array.isArray(
+                            leads
+                        )
+                    ) {
+                        leads = [];
+                    }
+
+                } catch (error) {
+
+                    leads = [];
+
+                }
+            }
+
+
+            leads.push(
+                leadData
+            );
+
+
+            localStorage.setItem(
+                "tafLeads",
+                JSON.stringify(
+                    leads
+                )
+            );
+
+            localStorage.setItem(
+                "tafLead",
+                JSON.stringify(
+                    leadData
+                )
+            );
+
+
+            /* ===============================
+               SUCCESS
+            =============================== */
+
+            window.location.href =
+                "success.html";
+
+        }
+    );
+}
+
+/* =========================================
+   SALES DASHBOARD
+========================================= */
+
+function getStoredLead() {
+    const storedLeads = localStorage.getItem("tafLeads");
+
+    if (!storedLeads) return [];
+
+    try {
+        const leads = JSON.parse(storedLeads);
+
+        if (!Array.isArray(leads)) {
+            return [];
+        }
+
+        return leads;
+    } catch (error) {
+        console.error("Data lead tidak dapat dibaca.", error);
+        return [];
+    }
+}
+
+function loadSuccessPage() {
+
+    const storedLead =
+        localStorage.getItem("tafLead");
+
+    if (!storedLead) {
+
+        console.warn(
+            "Data lead belum tersedia."
+        );
+
+        return;
+    }
+
+    let lead;
+
+    try {
+
+        lead =
+            JSON.parse(
+                storedLead
+            );
+
+    } catch (error) {
+
+        console.error(
+            "Data lead tidak dapat dibaca:",
+            error
+        );
+
+        return;
+    }
+
+
+    /* ===============================
+       CUSTOMER
+    ================================ */
+
+    const successCustomerName =
+        document.getElementById(
+            "success-customer-name"
+        );
+
+    const successCustomerNameDetail =
+        document.getElementById(
+            "success-customer-name-detail"
+        );
+
+    if (successCustomerName) {
+        successCustomerName.textContent =
+            lead.customerName || "Customer";
+    }
+
+    if (successCustomerNameDetail) {
+        successCustomerNameDetail.textContent =
+            lead.customerName || "-";
+    }
+
+
+    const successCustomerPhone =
+        document.getElementById(
+            "success-customer-phone"
+        );
+
+    if (successCustomerPhone) {
+        successCustomerPhone.textContent =
+            lead.customerPhone || "-";
+    }
+
+
+    const successCustomerEmail =
+        document.getElementById(
+            "success-customer-email"
+        );
+
+    if (successCustomerEmail) {
+        successCustomerEmail.textContent =
+            lead.customerEmail || "-";
+    }
+
+
+    const successCustomerCity =
+        document.getElementById(
+            "success-customer-city"
+        );
+
+    if (successCustomerCity) {
+        successCustomerCity.textContent =
+            lead.customerCity || "-";
+    }
+
+
+    const successCustomerBranch =
+        document.getElementById(
+            "success-customer-branch"
+        );
+
+    if (successCustomerBranch) {
+        successCustomerBranch.textContent =
+            lead.customerBranch ||
+            lead.branch ||
+            "-";
+    }
+
+
+    const successCustomerPurpose =
+        document.getElementById(
+            "success-customer-purpose"
+        );
+
+    if (successCustomerPurpose) {
+        successCustomerPurpose.textContent =
+            lead.customerPurpose || "-";
+    }
+
+
+    /* ===============================
+       VEHICLE
+    ================================ */
+
+    const successVehicleName =
+        document.getElementById(
+            "success-vehicle-name"
+        );
+
+    if (successVehicleName) {
+        successVehicleName.textContent =
+            lead.vehicleName || "-";
+    }
+
+
+    const successVehiclePrice =
+        document.getElementById(
+            "success-vehicle-price"
+        );
+
+    if (successVehiclePrice) {
+        successVehiclePrice.textContent =
+            formatRupiah(
+                lead.vehiclePrice
+            );
+    }
+
+
+    /* ===============================
+       SIMULATION
+    ================================ */
+
+    const successDp =
+        document.getElementById(
+            "success-dp"
+        );
+
+    if (successDp) {
+
+        successDp.textContent =
+            formatRupiah(
+                lead.dpAmount
+            ) +
+            " (" +
+            lead.dp +
+            "%)";
+    }
+
+
+    const successTenor =
+        document.getElementById(
+            "success-tenor"
+        );
+
+    if (successTenor) {
+        successTenor.textContent =
+            lead.tenor +
+            " Bulan";
+    }
+
+
+    const successFinancing =
+        document.getElementById(
+            "success-financing"
+        );
+
+    if (successFinancing) {
+        successFinancing.textContent =
+            formatRupiah(
+                lead.financing
+            );
+    }
+
+
+    const successInstallment =
+        document.getElementById(
+            "success-installment"
+        );
+
+    if (successInstallment) {
+        successInstallment.textContent =
+            formatRupiah(
+                lead.estimatedInstallment
+            ) +
+            " / bulan";
+    }
+
+
+    const successInsurance =
+        document.getElementById(
+            "success-insurance"
+        );
+
+    if (successInsurance) {
+
+        let insuranceText =
+            lead.insurance || "-";
+
+        if (
+            lead.insuranceProvider
+        ) {
+
+            insuranceText +=
+                " - " +
+                lead.insuranceProvider;
+        }
+
+        successInsurance.textContent =
+            insuranceText;
+    }
+
+}
+
+function getLeadStatusClass(status) {
+
+    if (status === "Contacted") {
+        return "status-contacted";
+    }
+
+    if (status === "Simulation") {
+        return "status-simulation";
+    }
+
+    if (
+        status === "Approved" ||
+        status === "Valid/DO" ||
+        status === "UF"
+    ) {
+        return "status-approved";
+    }
+
+    if (status === "Lost Opportunity") {
+        return "status-lost";
+    }
+
+    return "";
+
+}
+
+
+function formatLeadDate(dateString) {
+
+    if (!dateString) {
+        return "-";
+    }
+
+    const date =
+        new Date(dateString);
+
+    if (Number.isNaN(date.getTime())) {
+        return "-";
+    }
+
+    return date.toLocaleDateString(
+        "id-ID",
+        {
+            day: "2-digit",
+            month: "short",
+            year: "numeric"
+        }
+    );
+
+}
+
+
+function renderLeadDashboard() {
+
+    const leadTableBody =
+        document.getElementById("lead-table-body");
+
+    const emptyState =
+        document.getElementById("lead-empty-state");
+
+    const totalLeadElement =
+        document.getElementById("total-lead");
+
+
+    if (!leadTableBody) {
+        return;
+    }
+
+
+    /*
+     * ==========================================
+     * AMBIL CUSTOMER YANG SUDAH MASUK KE TAF
+     * ==========================================
+     */
+
+    const storedLeads =
+        localStorage.getItem("tafLeads");
+
+    let leads = [];
+
+
+    if (storedLeads) {
+
+        try {
+
+            leads = JSON.parse(storedLeads);
+
+            if (!Array.isArray(leads)) {
+                leads = [];
+            }
+
+        } catch (error) {
+
+            console.error(
+                "Data customer tidak dapat dibaca:",
+                error
+            );
+
+            leads = [];
+
+        }
+
+    }
+
+
+    /*
+     * ==========================================
+     * TOTAL LEAD
+     * ==========================================
+     *
+     * Total Lead = jumlah customer yang sudah
+     * masuk / menunjukkan ketertarikan melalui
+     * TAF Digital Showcase.
+     *
+     * Tidak peduli statusnya apa.
+     *
+     * New Lead
+     * Contacted
+     * Qualified Prospect
+     * Simulation
+     * App-In
+     * Approved
+     * Valid/DO
+     * UF
+     * Lost Opportunity
+     *
+     * Semuanya tetap dihitung sebagai customer
+     * yang pernah masuk sebagai lead.
+     */
+
+    if (totalLeadElement) {
+
+        totalLeadElement.textContent =
+            leads.length;
+
+    }
+
+
+    /*
+     * ==========================================
+     * KALAU BELUM ADA CUSTOMER
+     * ==========================================
+     */
+
+    if (leads.length === 0) {
+
+        leadTableBody.innerHTML = "";
+
+        if (emptyState) {
+            emptyState.style.display = "block";
+        }
+
+        return;
+
+    }
+
+
+    /*
+     * ==========================================
+     * CUSTOMER SUDAH ADA
+     * ==========================================
+     */
+
+    if (emptyState) {
+        emptyState.style.display = "none";
+    }
+
+
+    /*
+     * ==========================================
+     * TAMPILKAN CUSTOMER
+     * ==========================================
+     */
+
+    leadTableBody.innerHTML = leads.map(
+        function (lead) {
+
+            const dp =
+                lead.dp !== undefined
+                    ? lead.dp
+                    : "-";
+
+
+            const tenor =
+                lead.tenor !== undefined
+                    ? lead.tenor
+                    : "-";
+
+
+            const status =
+                lead.status || "New Lead";
+
+
+            return `
+
+                <tr>
+
+                    <td>
+
+                        <div class="lead-customer">
+
+                            <strong>
+                                ${lead.customerName || "-"}
+                            </strong>
+
+                            <span>
+                                ${lead.customerPhone || "-"}
+                            </span>
+
+                        </div>
+
+                    </td>
+
+
+                    <td>
+
+                        <div class="lead-unit">
+
+                            <strong>
+                                ${lead.vehicleName || "-"}
+                            </strong>
+
+                            <span>
+                                ${formatLeadCurrency(
+                                    lead.vehiclePrice
+                                )}
+                            </span>
+
+                        </div>
+
+                    </td>
+
+
+                    <td>
+                        ${lead.showroom || "-"}
+                    </td>
+
+
+                    <td>
+
+                        <div class="lead-simulation">
+
+                            <strong>
+                                DP ${dp}%
+                            </strong>
+
+                            <span>
+                                ${tenor} Bulan
+                            </span>
+
+                        </div>
+
+                    </td>
+
+
+                    <td>
+
+                        <span class="lead-status-badge">
+
+                            ${status}
+
+                        </span>
+
+                    </td>
+
+
+                    <td>
+
+                        <a
+                            href="lead-detail.html?id=${encodeURIComponent(
+                                lead.id
+                            )}"
+                            class="lead-detail-button"
+                        >
+                            Lihat Detail
+                        </a>
+
+                    </td>
+
+                </tr>
+
+            `;
+
+        }
+    ).join("");
+
+}
+
+function updateTotalLead() {
+
+    const storedLeads =
+        localStorage.getItem("tafLeads");
+
+    let leads = [];
+
+    if (storedLeads) {
+
+        try {
+
+            leads = JSON.parse(storedLeads);
+
+            if (!Array.isArray(leads)) {
+                leads = [];
+            }
+
+        } catch (error) {
+
+            console.error(
+                "Data customer tidak dapat dibaca:",
+                error
+            );
+
+            leads = [];
+        }
+    }
+
+
+    /*
+     * Total Lead =
+     * seluruh customer yang sudah masuk
+     * ke TAF Digital Showcase.
+     */
+
+    const totalLead =
+        leads.length;
+
+
+    /*
+     * Ambil SEMUA elemen dengan ID total-lead.
+     * Ini dibuat supaya aman apabila ternyata
+     * ada elemen yang terduplikasi.
+     */
+
+    const totalLeadElements =
+        document.querySelectorAll("#total-lead");
+
+
+    totalLeadElements.forEach(function (element) {
+
+        element.textContent =
+            totalLead;
+
+    });
+
+
+    console.log(
+        "TOTAL CUSTOMER / LEAD:",
+        totalLead
+    );
+}
+
+if (document.getElementById("lead-table-body")) {
+
+    renderLeadDashboard();
+
+    updateDashboardKPI();
+
+    updateTotalLead();
+
+}
+
+function updateDashboardKPI() {
+
+    /*
+     * ==========================================
+     * AMBIL SEMUA LEAD DARI LOCAL STORAGE
+     * ==========================================
+     */
+
+    const storedLeads =
+        localStorage.getItem("tafLeads");
+
+    let leads = [];
+
+    if (storedLeads) {
+
+        try {
+
+            leads = JSON.parse(storedLeads);
+
+            if (!Array.isArray(leads)) {
+                leads = [];
+            }
+
+        } catch (error) {
+
+            console.error(
+                "Data lead tidak dapat dibaca:",
+                error
+            );
+
+            leads = [];
+        }
+    }
+
+
+    /*
+     * ==========================================
+     * HITUNG SETIAP STATUS
+     * ==========================================
+     */
+
+    const newLead =
+        leads.filter(function (lead) {
+
+            return lead.status === "New Lead";
+
+        }).length;
+
+
+    const contacted =
+        leads.filter(function (lead) {
+
+            return lead.status === "Contacted";
+
+        }).length;
+
+
+    const qualifiedProspect =
+        leads.filter(function (lead) {
+
+            return lead.status === "Qualified Prospect";
+
+        }).length;
+
+
+    const simulation =
+        leads.filter(function (lead) {
+
+            return lead.status === "Simulation";
+
+        }).length;
+
+
+    const appIn =
+        leads.filter(function (lead) {
+
+            return lead.status === "App-In";
+
+        }).length;
+
+
+    const approved =
+        leads.filter(function (lead) {
+
+            return lead.status === "Approved";
+
+        }).length;
+
+
+    const validDO =
+        leads.filter(function (lead) {
+
+            return lead.status === "Valid/DO";
+
+        }).length;
+
+
+    const uf =
+        leads.filter(function (lead) {
+
+            return lead.status === "UF";
+
+        }).length;
+
+
+    const lostOpportunity =
+        leads.filter(function (lead) {
+
+            return lead.status === "Lost Opportunity";
+
+        }).length;
+
+
+    /*
+     * ==========================================
+     * UPDATE KPI ELEMENT
+     * ==========================================
+     */
+
+    const newLeadElement =
+        document.getElementById("kpi-new-lead");
+
+    const contactedElement =
+        document.getElementById("kpi-contacted");
+
+    const qualifiedProspectElement =
+        document.getElementById("kpi-qualified-prospect");
+
+    const simulationElement =
+        document.getElementById("kpi-simulation");
+
+    const appInElement =
+        document.getElementById("kpi-app-in");
+
+    const approvedElement =
+        document.getElementById("kpi-approved");
+
+    const validDOElement =
+        document.getElementById("kpi-valid-do");
+
+    const ufElement =
+        document.getElementById("kpi-uf");
+
+    const lostOpportunityElement =
+        document.getElementById("kpi-lost-opportunity");
+
+
+    /*
+     * ==========================================
+     * MASUKKAN ANGKA KE DASHBOARD
+     * ==========================================
+     */
+
+    if (newLeadElement) {
+
+        newLeadElement.textContent =
+            newLead;
+
+    }
+
+
+    if (contactedElement) {
+
+        contactedElement.textContent =
+            contacted;
+
+    }
+
+
+    if (qualifiedProspectElement) {
+
+        qualifiedProspectElement.textContent =
+            qualifiedProspect;
+
+    }
+
+
+    if (simulationElement) {
+
+        simulationElement.textContent =
+            simulation;
+
+    }
+
+
+    if (appInElement) {
+
+        appInElement.textContent =
+            appIn;
+
+    }
+
+
+    if (approvedElement) {
+
+        approvedElement.textContent =
+            approved;
+
+    }
+
+
+    if (validDOElement) {
+
+        validDOElement.textContent =
+            validDO;
+
+    }
+
+
+    if (ufElement) {
+
+        ufElement.textContent =
+            uf;
+
+    }
+
+
+    if (lostOpportunityElement) {
+
+        lostOpportunityElement.textContent =
+            lostOpportunity;
+
+    }
+
+}
+
+
+
+function setupDashboardFilters() {
+
+    const searchInput =
+        document.getElementById(
+            "lead-search-input"
+        );
+
+    const statusFilter =
+        document.getElementById(
+            "lead-status-filter"
+        );
+
+
+    if (searchInput) {
+
+        searchInput.addEventListener(
+            "input",
+            function() {
+
+                renderLeadDashboard();
+
+            }
+        );
+
+    }
+
+
+    if (statusFilter) {
+
+        statusFilter.addEventListener(
+            "change",
+            function() {
+
+                renderLeadDashboard();
+
+            }
+        );
+
+    }
+
+}
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        renderLeadDashboard();
+
+        updateDashboardKPI();
+
+        setupDashboardFilters();
+
+    }
+);
+
+function setupSOLogin() {
+    const loginForm = document.getElementById("so-login-form");
+
+    if (!loginForm) return;
+
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const soId = document.getElementById("so-id").value.trim();
+        const password = document.getElementById("so-password").value;
+
+        const validSOId = "SO001";
+        const validPassword = "TAF2026";
+
+        if (soId === validSOId && password === validPassword) {
+
+            localStorage.setItem("soLoggedIn", "true");
+            localStorage.setItem("soId", soId);
+
+            window.location.href = "dashboard.html";
+
+        } else {
+
+            alert("ID Sales Officer atau password salah.");
+
+        }
+    });
+}
+
+setupSOLogin();
+
+if (document.getElementById("lead-customer-name")) {
+    loadLeadDetail();
+}
+
+if (document.getElementById("customer-form")) {
+    loadCustomerInfo();
+}
+
+if (document.getElementById("success-vehicle-name")) {
+    loadSuccessPage();
+}
+
+if (document.getElementById("total-lead")) {
+    updateDashboardKPI();
+}
+// =========================
+// LEAD DETAIL
+// =========================
+
+function getLeadById() {
+
+    const params = new URLSearchParams(window.location.search);
+    const leadId = params.get("id");
+
+    if (!leadId) {
+        return null;
+    }
+
+    const storedLeads = localStorage.getItem("tafLeads");
+
+    if (!storedLeads) {
+        return null;
+    }
+
+    try {
+
+        const leads = JSON.parse(storedLeads);
+
+        if (!Array.isArray(leads)) {
+            return null;
+        }
+
+        return leads.find(function (lead) {
+            return lead.id === leadId;
+        });
+
+    } catch (error) {
+
+        return null;
+
+    }
+}
+
+
+function formatLeadDetailDate(dateString) {
+
+    if (!dateString) {
+        return "-";
+    }
+
+    const date = new Date(dateString);
+
+    if (isNaN(date.getTime())) {
+        return "-";
+    }
+
+    return date.toLocaleDateString("id-ID", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric"
+    });
+}
+
+
+function formatLeadCurrency(value) {
+
+    const number = Number(value);
+
+    if (isNaN(number)) {
+        return "-";
+    }
+
+    return "Rp " + number.toLocaleString("id-ID");
+}
+
+
+function loadLeadDetail() {
+
+    const lead = getLeadById();
+
+    if (!lead) {
+
+        alert("Data lead tidak ditemukan.");
+
+        window.location.href = "dashboard.html";
+
+        return;
+    }
+
+
+    // CUSTOMER
+    document.getElementById("lead-customer-name").textContent =
+        lead.customerName || "-";
+
+    document.getElementById("lead-customer-phone").textContent =
+        lead.customerPhone || "-";
+
+    document.getElementById("lead-customer-email").textContent =
+        lead.customerEmail || "-";
+
+    document.getElementById("lead-customer-city").textContent =
+        lead.customerCity || "-";
+
+    document.getElementById("lead-customer-purpose").textContent =
+        lead.customerPurpose || "-";
+
+    document.getElementById("lead-created-date").textContent =
+        formatLeadDetailDate(lead.createdAt);
+
+
+    // VEHICLE
+    document.getElementById("lead-vehicle-name").textContent =
+        lead.vehicleName || "-";
+
+    document.getElementById("lead-vehicle-price").textContent =
+        formatLeadCurrency(lead.vehiclePrice);
+
+
+    // SHOWROOM
+    let showroomName = "-";
+
+    if (typeof vehicleData !== "undefined" && lead.vehicle) {
+
+        const vehicle = vehicleData[lead.vehicle];
+
+        if (vehicle) {
+            showroomName = vehicle.showroom || "-";
+        }
+    }
+
+    document.getElementById("lead-showroom").textContent =
+        showroomName;
+
+
+    // =====================================================
+    // SIMULATION
+    // Menggunakan data simulasi yang benar-benar diajukan
+    // customer
+    // =====================================================
+
+    const leadSimulationPrice =
+        document.getElementById(
+            "lead-simulation-price"
+        );
+
+    const leadSimulationDp =
+        document.getElementById(
+            "lead-simulation-dp"
+        );
+
+    const leadSimulationTenor =
+        document.getElementById(
+            "lead-simulation-tenor"
+        );
+
+    const leadSimulationFinancing =
+        document.getElementById(
+            "lead-simulation-financing"
+        );
+
+
+    // Harga Unit
+    if (leadSimulationPrice) {
+
+        leadSimulationPrice.textContent =
+            formatLeadCurrency(
+                lead.vehiclePrice
+            );
+
+    }
+
+
+    // Uang Muka
+    if (leadSimulationDp) {
+
+        if (
+            lead.dpAmount !== undefined &&
+            lead.dpAmount !== null
+        ) {
+
+            leadSimulationDp.textContent =
+                formatLeadCurrency(
+                    lead.dpAmount
+                ) +
+                " (" +
+                (lead.dp || 0) +
+                "%)";
+
+        } else {
+
+            leadSimulationDp.textContent =
+                (lead.dp || 0) +
+                "%";
+
+        }
+
+    }
+
+
+    // Tenor
+    if (leadSimulationTenor) {
+
+        leadSimulationTenor.textContent =
+            (lead.tenor || "-") +
+            " Bulan";
+
+    }
+
+
+    // Jumlah Pembiayaan
+    if (leadSimulationFinancing) {
+
+        if (
+            lead.financing !== undefined &&
+            lead.financing !== null
+        ) {
+
+            leadSimulationFinancing.textContent =
+                formatLeadCurrency(
+                    lead.financing
+                );
+
+        } else {
+
+            leadSimulationFinancing.textContent =
+                "-";
+
+        }
+
+    }
+
+
+    // STATUS
+    const statusSelect =
+        document.getElementById(
+            "lead-status-select"
+        );
+
+    if (statusSelect) {
+
+        statusSelect.value =
+            lead.status || "New Lead";
+
+    }
+
+    updateLeadStatusBadge(
+        lead.status || "New Lead"
+    );
+
+
+    // FOLLOW UP
+    document.getElementById(
+        "lead-last-followup"
+    ).textContent =
+        lead.lastFollowup
+            ? formatLeadDetailDate(
+                lead.lastFollowup
+            )
+            : "Belum ada follow-up";
+
+    document.getElementById(
+        "lead-next-action"
+    ).textContent =
+        lead.nextAction ||
+        "Belum ditentukan";
+
+}
+
+
+function updateLeadStatusBadge(status) {
+
+    const badge =
+        document.getElementById("lead-status-badge");
+
+    if (!badge) {
+        return;
+    }
+
+    badge.textContent = status || "New Lead";
+
+}
+
+
+function updateLeadStatus() {
+
+    const lead = getLeadById();
+
+    if (!lead) {
+        alert("Data lead tidak ditemukan.");
+        return;
+    }
+
+    const newStatus =
+        document.getElementById("lead-status-select").value;
+
+
+    const storedLeads =
+        localStorage.getItem("tafLeads");
+
+    if (!storedLeads) {
+        return;
+    }
+
+
+    try {
+
+        const leads = JSON.parse(storedLeads);
+
+        const leadIndex = leads.findIndex(function (item) {
+            return item.id === lead.id;
+        });
+
+
+        if (leadIndex === -1) {
+            alert("Lead tidak ditemukan.");
+            return;
+        }
+
+
+        leads[leadIndex].status = newStatus;
+
+        localStorage.setItem(
+            "tafLeads",
+            JSON.stringify(leads)
+        );
+
+
+        updateLeadStatusBadge(newStatus);
+
+        alert("Status lead berhasil diperbarui.");
+
+
+    } catch (error) {
+
+        alert("Terjadi kesalahan saat memperbarui status.");
+
+    }
+
+}
+
+
+function saveLeadFollowup() {
+
+    const lead = getLeadById();
+
+    if (!lead) {
+        alert("Data lead tidak ditemukan.");
+        return;
+    }
+
+
+    const noteElement =
+        document.getElementById("lead-followup-note");
+
+    if (!noteElement) {
+        alert("Kolom catatan follow-up tidak ditemukan.");
+        return;
+    }
+
+
+    const note =
+        noteElement.value.trim();
+
+
+    if (!note) {
+        alert("Silakan isi catatan follow-up terlebih dahulu.");
+        return;
+    }
+
+
+    const storedLeads =
+        localStorage.getItem("tafLeads");
+
+
+    if (!storedLeads) {
+        alert("Data lead tidak ditemukan.");
+        return;
+    }
+
+
+    try {
+
+        const leads =
+            JSON.parse(storedLeads);
+
+
+        const leadIndex =
+            leads.findIndex(function (item) {
+
+                return item.id === lead.id;
+
+            });
+
+
+        if (leadIndex === -1) {
+
+            alert("Lead tidak ditemukan.");
+
+            return;
+        }
+
+
+        /*
+         * ==========================================
+         * BUAT HISTORY FOLLOW-UP
+         * ==========================================
+         */
+
+        if (
+            !Array.isArray(
+                leads[leadIndex].followupHistory
+            )
+        ) {
+
+            leads[leadIndex].followupHistory = [];
+
+        }
+
+
+        const followupData = {
+
+            date: new Date().toISOString(),
+
+            note: note,
+
+            nextAction: "Follow-up lanjutan"
+
+        };
+
+
+        leads[leadIndex].followupHistory.push(
+            followupData
+        );
+
+
+        /*
+         * ==========================================
+         * UPDATE DATA TERAKHIR
+         * ==========================================
+         */
+
+        leads[leadIndex].lastFollowup =
+            followupData.date;
+
+
+        leads[leadIndex].followupNote =
+            note;
+
+
+        leads[leadIndex].nextAction =
+            followupData.nextAction;
+
+
+        /*
+         * ==========================================
+         * SIMPAN KE LOCAL STORAGE
+         * ==========================================
+         */
+
+        localStorage.setItem(
+            "tafLeads",
+            JSON.stringify(leads)
+        );
+
+
+        /*
+         * ==========================================
+         * UPDATE SUMMARY
+         * ==========================================
+         */
+
+        const lastFollowupElement =
+            document.getElementById(
+                "lead-last-followup"
+            );
+
+
+        const nextActionElement =
+            document.getElementById(
+                "lead-next-action"
+            );
+
+
+        if (lastFollowupElement) {
+
+            lastFollowupElement.textContent =
+                formatLeadDetailDate(
+                    followupData.date
+                );
+
+        }
+
+
+        if (nextActionElement) {
+
+            nextActionElement.textContent =
+                followupData.nextAction;
+
+        }
+
+
+        /*
+         * ==========================================
+         * REFRESH RIWAYAT FOLLOW-UP
+         * ==========================================
+         */
+
+        renderLeadFollowupHistory(
+            leads[leadIndex]
+        );
+
+
+        /*
+         * ==========================================
+         * KOSONGKAN TEXTAREA
+         * ==========================================
+         */
+
+        noteElement.value = "";
+
+
+        alert(
+            "Follow-up berhasil disimpan."
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Error saat menyimpan follow-up:",
+            error
+        );
+
+
+        alert(
+            "Terjadi kesalahan saat menyimpan follow-up."
+        );
+
+    }
+
+}
+
+function renderLeadFollowupHistory(lead) {
+
+    const historyContainer =
+        document.getElementById(
+            "lead-followup-history-list"
+        );
+
+
+    if (!historyContainer) {
+        return;
+    }
+
+
+    /*
+     * Ambil history follow-up
+     */
+
+    let history =
+        Array.isArray(lead.followupHistory)
+            ? lead.followupHistory
+            : [];
+
+
+    /*
+     * ==========================================
+     * MIGRASI DATA LAMA
+     * ==========================================
+     *
+     * Kalau sebelumnya sudah pernah menyimpan
+     * followupNote dengan sistem lama, tetapi
+     * belum memiliki followupHistory, kita tetap
+     * tampilkan catatan tersebut.
+     */
+
+    if (
+        history.length === 0 &&
+        lead.followupNote
+    ) {
+
+        history = [
+
+            {
+                date:
+                    lead.lastFollowup ||
+                    lead.createdAt,
+
+                note:
+                    lead.followupNote,
+
+                nextAction:
+                    lead.nextAction ||
+                    "Follow-up lanjutan"
+
+            }
+
+        ];
+
+    }
+
+
+    /*
+     * Kalau belum ada history
+     */
+
+    if (history.length === 0) {
+
+        historyContainer.innerHTML = `
+
+            <div class="lead-followup-empty">
+
+                Belum ada riwayat follow-up.
+                <br>
+
+                Simpan hasil komunikasi pertama
+                untuk mulai mencatat aktivitas customer.
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    /*
+     * Tampilkan history terbaru di atas
+     */
+
+    const sortedHistory =
+        [...history].reverse();
+
+
+    historyContainer.innerHTML =
+        sortedHistory.map(
+            function (item) {
+
+                return `
+
+                    <div class="lead-followup-history-item">
+
+                        <div class="lead-followup-history-meta">
+
+                            <span class="lead-followup-history-date">
+
+                                ${formatLeadDetailDate(
+                                    item.date
+                                )}
+
+                            </span>
+
+
+                            <span class="lead-followup-history-action">
+
+                                Next Action:
+                                ${escapeLeadFollowupText(
+                                    item.nextAction ||
+                                    "Follow-up lanjutan"
+                                )}
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="lead-followup-history-note">
+
+                            ${escapeLeadFollowupText(
+                                item.note
+                            )}
+
+                        </p>
+
+                    </div>
+
+                `;
+
+            }
+        ).join("");
+
+}
+
+function escapeLeadFollowupText(text) {
+
+    if (text === null || text === undefined) {
+        return "";
+    }
+
+
+    return String(text)
+
+        .replace(/&/g, "&amp;")
+
+        .replace(/</g, "&lt;")
+
+        .replace(/>/g, "&gt;")
+
+        .replace(/"/g, "&quot;")
+
+        .replace(/'/g, "&#039;");
+
+}
+
+// FOLLOW UP
+document.getElementById("lead-last-followup").textContent =
+    lead.lastFollowup
+        ? formatLeadDetailDate(lead.lastFollowup)
+        : "Belum ada follow-up";
+
+document.getElementById("lead-next-action").textContent =
+    lead.nextAction || "Initial follow-up";
+
+renderLeadFollowupHistory(lead);
+
+if (document.getElementById("lead-customer-name")) {
+    loadLeadDetail();
+}
+
+
+/* =====================================================
+   INITIALIZATION
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        loadVehicleDetail();
+
+        loadSimulationPage();
+
+        setupSimulationLink();
+
+
+        /*
+         * Hanya jalankan loadSimulationResult()
+         * jika memang sedang berada di halaman
+         * hasil simulasi.
+         */
+
+        if (
+            document.getElementById(
+                "result-vehicle-name"
+            )
+        ) {
+
+            loadSimulationResult();
+
+        }
+
+    }
+);

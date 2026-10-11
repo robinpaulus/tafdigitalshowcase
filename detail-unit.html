@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Detail Unit | TAF Digital Showcase</title>
+
+    <!-- CSS utama -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="main-header">
+        <div class="header-container">
+
+            <div class="logo-area">
+                <div class="taf-logo">TAF</div>
+                <span>Digital Showcase</span>
+            </div>
+
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="index.html#unit-section">Cari Unit</a>
+                <a href="login-so.html" class="so-login-button">
+                    Login SO
+                </a>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Buka menu" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="detail-page">
+
+
+        <!-- =====================================
+             TOP NAVIGATION
+        ====================================== -->
+
+        <div class="detail-topbar">
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ←
+                <span>Kembali</span>
+            </a>
+
+
+            <button
+                class="favorite-button"
+                aria-label="Tambahkan ke favorit"
+                onclick="toggleFavorite(this)"
+            >
+                ♡
+            </button>
+
+        </div>
+
+
+
+        <!-- =====================================
+            VEHICLE DETAIL
+        ====================================== -->
+
+        <section class="vehicle-detail">
+
+            <!-- =================================
+                IMAGE GALLERY
+            ================================== -->
+
+            <div class="vehicle-gallery">
+
+                <!-- Main Image -->
+
+                <div class="main-vehicle-image">
+
+                    <span class="partner-badge">
+                        Partner Showroom TAF
+                    </span>
+
+                    <img
+                        id="vehicle-main-image"
+                        src=""
+                        alt="Foto kendaraan"
+                    >
+
+                </div>
+
+
+                <!-- Thumbnail -->
+
+                <div class="thumbnail-list">
+
+                    <button
+                        type="button"
+                        class="thumbnail active"
+                        data-image-index="0"
+                        onclick="selectVehicleImage(0)"
+                        aria-label="Foto kendaraan 1"
+                    >
+                        <img
+                            id="vehicle-thumbnail-0"
+                            src=""
+                            alt="Foto kendaraan 1"
+                        >
+                    </button>
+                
+
+                    <button
+                        type="button"
+                        class="thumbnail"
+                        data-image-index="1"
+                        onclick="selectVehicleImage(1)"
+                        aria-label="Foto kendaraan 2"
+                    >
+                        <img
+                            id="vehicle-thumbnail-1"
+                            src=""
+                            alt="Foto kendaraan 2"
+                        >
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="thumbnail"
+                        data-image-index="2"
+                        onclick="selectVehicleImage(2)"
+                        aria-label="Foto kendaraan 3"
+                    >
+                        <img
+                            id="vehicle-thumbnail-2"
+                            src=""
+                            alt="Foto kendaraan 3"
+                        >
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="thumbnail"
+                        data-image-index="3"
+                        onclick="selectVehicleImage(3)"
+                        aria-label="Foto kendaraan 4"
+                    >
+                        <img
+                            id="vehicle-thumbnail-3"
+                            src=""
+                            alt="Foto kendaraan 4"
+                        >
+                    </button>
+
+                </div>
+            </div>
+            
+            <!-- =================================
+                 VEHICLE INFORMATION
+            ================================== -->
+
+            <div class="vehicle-detail-info">
+
+
+                <!-- Vehicle Name -->
+
+                <h1 id="vehicle-name">
+                    Toyota Avanza 2022
+                </h1>
+
+
+                <!-- Price -->
+
+                <div
+                    class="detail-price"
+                    id="vehicle-price"
+                >
+                    Rp 175.000.000
+                </div>
+
+
+
+                <!-- Status & Showroom -->
+
+                <div class="detail-badges">
+
+                    <span class="availability-badge">
+                        ● Tersedia
+                    </span>
+
+                    <span class="showroom-badge">
+                        Partner Showroom TAF
+                    </span>
+
+                </div>
+
+
+
+                <!-- Vehicle Quick Information -->
+
+                <div class="vehicle-quick-info">
+
+                    <div class="quick-info-item">
+
+                        <span class="quick-icon">
+                            ◉
+                        </span>
+
+                        <span id="vehicle-mileage">
+                            67.000 km
+                        </span>
+
+                    </div>
+
+
+                    <div class="quick-info-item">
+
+                        <span class="quick-icon">
+                            ⚙
+                        </span>
+
+                        <span id="vehicle-transmission">
+                            Automatic
+                        </span>
+
+                    </div>
+
+
+                    <div class="quick-info-item">
+
+                        <span class="quick-icon">
+                            ⛽
+                        </span>
+
+                        <span id="vehicle-fuel">
+                            Bensin
+                        </span>
+
+                    </div>
+
+
+                    <div class="quick-info-item">
+
+                        <span class="quick-icon">
+                            ◇
+                        </span>
+
+                        <span id="vehicle-color">
+                            Putih
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     UNIT INFORMATION
+                ================================== -->
+
+                <section class="unit-information">
+
+                    <h2>
+                        Informasi Unit
+                    </h2>
+
+
+                    <div class="information-table">
+
+
+                        <div class="information-row">
+
+                            <span>
+                                Merek / Model
+                            </span>
+
+                            <strong id="vehicle-model">
+                                Toyota Avanza
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-row">
+
+                            <span>
+                                Tahun
+                            </span>
+
+                            <strong id="vehicle-year">
+                                2022
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-row">
+
+                            <span>
+                                Tipe
+                            </span>
+
+                            <strong id="vehicle-type">
+                                1.5 G
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-row">
+
+                            <span>
+                                Warna
+                            </span>
+
+                            <strong id="vehicle-information-color">
+                                Putih
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-row">
+
+                            <span>
+                                Kondisi
+                            </span>
+
+                            <strong id="vehicle-condition">
+                                Baik
+                            </strong>
+
+                        </div>
+
+
+                        <div class="information-row">
+
+                            <span>
+                                Lokasi
+                            </span>
+
+                            <strong id="vehicle-showroom">
+                                VIP Cars Mobilindo - Palembang
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     ACTION BUTTONS
+                ================================== -->
+
+                <div class="detail-actions">
+                    <a
+                        href="#"
+                        id="simulation-link"
+                        class="primary-action"
+                    >
+                        Ajukan Simulasi TAF
+                    </a>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             INFORMATION / TRUST SECTION
+        ====================================== -->
+
+        <section class="detail-note">
+
+
+            <div class="note-icon">
+                ℹ
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Ingin mengetahui estimasi pembiayaan?
+                </h3>
+
+                <p>
+                    Ajukan simulasi pembiayaan TAF untuk
+                    mendapatkan estimasi berdasarkan unit
+                    yang kamu pilih.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             PROCESS INDICATOR
+        ====================================== -->
+
+        <section class="process-section">
+
+            <div class="process-header">
+
+                <span>
+                    TAF DIGITAL SHOWCASE
+                </span>
+
+                <h2>
+                    Alur Selanjutnya
+                </h2>
+
+            </div>
+
+
+            <div class="process-list">
+
+
+                <!-- STEP 1 -->
+
+                <div class="process-item active">
+
+                    <div class="process-number">
+                        1
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Pilih Unit
+                        </strong>
+
+                        <p>
+                            Customer memilih unit
+                            yang diminati.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 2 -->
+
+                <div class="process-item active">
+
+                    <div class="process-number">
+                        2
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Lihat Detail
+                        </strong>
+
+                        <p>
+                            Customer melihat informasi
+                            unit dan showroom.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 3 -->
+
+                <div class="process-item">
+
+                    <div class="process-number">
+                        3
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Ajukan Simulasi
+                        </strong>
+
+                        <p>
+                            Customer mengajukan
+                            simulasi pembiayaan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 4 -->
+
+                <div class="process-item">
+
+                    <div class="process-number">
+                        4
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            TAF Lead
+                        </strong>
+
+                        <p>
+                            Inquiry diteruskan
+                            kepada TAF.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 5 -->
+
+                <div class="process-item">
+
+                    <div class="process-number">
+                        5
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            First Offer
+                        </strong>
+
+                        <p>
+                            Tim TAF melakukan
+                            follow up dan penawaran.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STEP 6 -->
+
+                <div class="process-item">
+
+                    <div class="process-number">
+                        6
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Proses Pembiayaan
+                        </strong>
+
+                        <p>
+                            Proses dilanjutkan sesuai
+                            tahapan pembiayaan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            taf
+        </div>
+
+        <p>
+            TAF Digital Showcase
+        </p>
+
+        <small>
+            Prototype / Kaizen Countermeasure
+        </small>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

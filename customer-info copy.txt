@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Customer | TAF Digital Showcase</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+
+            <div class="logo-area">
+                <div class="taf-logo">TAF</div>
+                <span>Digital Showcase</span>
+            </div>
+
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="index.html#unit-section">Cari Unit</a>
+                <a href="login-so.html" class="so-login-button">
+                    Login SO
+                </a>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Buka menu" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <main class="customer-page">
+
+        <div class="customer-topbar">
+
+            <a
+                href="#"
+                id="back-to-result"
+                class="back-button"
+            >
+                ← Kembali ke Hasil Simulasi
+            </a>
+
+        </div>
+
+
+        <section class="customer-header">
+
+            <span class="section-label">
+                TAF DIGITAL SHOWCASE
+            </span>
+
+            <h1>
+                Data Ketertarikan Customer
+            </h1>
+
+            <p>
+                Isi data berikut agar TAF dapat menerima informasi
+                ketertarikan kamu dan melakukan follow-up lebih lanjut.
+            </p>
+
+        </section>
+
+
+        <section class="customer-layout">
+
+
+            <!-- SUMMARY -->
+
+            <aside class="customer-summary">
+
+                <div class="customer-summary-header">
+
+                    <span class="simulation-label">
+                        UNIT & SIMULASI
+                    </span>
+
+                    <h2 id="customer-vehicle-name">
+                        Toyota Avanza 2022
+                    </h2>
+
+                </div>
+
+
+                <div class="customer-summary-image">
+
+                    <div class="car-placeholder large">
+                        🚗
+                    </div>
+
+                </div>
+
+
+                <div class="customer-summary-content">
+
+                    <div class="customer-summary-row">
+
+                        <span>
+                            Harga Unit
+                        </span>
+
+                        <strong id="customer-vehicle-price">
+                            Rp 175.000.000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="customer-summary-row">
+
+                        <span>
+                            Uang Muka
+                        </span>
+
+                        <strong id="customer-dp">
+                            Rp 35.000.000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="customer-summary-row">
+
+                        <span>
+                            Tenor
+                        </span>
+
+                        <strong id="customer-tenor">
+                            48 Bulan
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- FORM -->
+
+            <section class="customer-form-card">
+
+                <div class="customer-form-header">
+
+                    <span class="section-label">
+                        INFORMASI CUSTOMER
+                    </span>
+
+                    <h2>
+                        Bagaimana TAF dapat menghubungi kamu?
+                    </h2>
+
+                    <p>
+                        Data ini digunakan sebagai informasi awal
+                        untuk kebutuhan follow-up terkait unit dan
+                        simulasi yang kamu pilih.
+                    </p>
+
+                </div>
+
+
+                <form id="customer-form">
+
+
+                    <div class="form-group">
+
+                        <label for="customer-name">
+                            Nama Lengkap
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customer-name"
+                            name="customerName"
+                            placeholder="Masukkan nama lengkap"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customer-phone">
+                            Nomor WhatsApp
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customer-phone"
+                            name="customerPhone"
+                            placeholder="Contoh: 081234567890"
+                            required
+                        >
+
+                        <small>
+                            Pastikan nomor WhatsApp aktif agar TAF
+                            dapat menghubungi kamu.
+                        </small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customer-email">
+                            Email
+                            <span class="optional-label">
+                                Opsional
+                            </span>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="customer-email"
+                            name="customerEmail"
+                            placeholder="Contoh: nama@email.com"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customer-city">
+                            Kota Domisili
+                        </label>
+
+                        <select
+                            id="customer-city"
+                            name="customerCity"
+                            required
+                        >
+
+                            <option value="">
+                                Pilih kota
+                            </option>
+
+                            <option value="Palembang">
+                                Palembang
+                            </option>
+
+                            <option value="Prabumulih">
+                                Prabumulih
+                            </option>
+
+                            <option value="Muara Enim">
+                                Muara Enim
+                            </option>
+
+                            <option value="Lainnya">
+                                Kota lainnya
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customer-purpose">
+                            Kebutuhan
+                        </label>
+
+                        <select
+                            id="customer-purpose"
+                            name="customerPurpose"
+                            required
+                        >
+
+                            <option value="">
+                                Pilih kebutuhan
+                            </option>
+
+                            <option value="Kendaraan pribadi">
+                                Kendaraan pribadi
+                            </option>
+
+                            <option value="Kendaraan keluarga">
+                                Kendaraan keluarga
+                            </option>
+
+                            <option value="Kendaraan usaha">
+                                Kendaraan usaha
+                            </option>
+
+                            <option value="Lainnya">
+                                Lainnya
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="customer-consent">
+
+                        <input
+                            type="checkbox"
+                            id="customer-consent"
+                            required
+                        >
+
+                        <label for="customer-consent">
+                            Saya bersedia dihubungi oleh TAF terkait
+                            unit dan simulasi yang saya pilih.
+                        </label>
+
+                    </div>
+
+
+                    <div class="customer-form-note">
+
+                        <span>ⓘ</span>
+
+                        <p>
+                            Data yang dikirim pada prototype ini
+                            belum terhubung dengan sistem TAF.
+                            Informasi digunakan sebagai simulasi
+                            alur lead capture.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="customer-submit"
+                    >
+                        Kirim Ketertarikan ke TAF
+                    </button>
+
+
+                </form>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

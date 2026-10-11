@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hasil Simulasi | TAF Digital Showcase</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+
+            <div class="logo-area">
+                <div class="taf-logo">TAF</div>
+                <span>Digital Showcase</span>
+            </div>
+
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="index.html#unit-section">Cari Unit</a>
+                <a href="login-so.html" class="so-login-button">
+                    Login SO
+                </a>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Buka menu" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <main class="result-page">
+
+        <!-- =================================
+            TOP BAR
+        ================================== -->
+
+        <div class="result-topbar">
+
+            <a
+                href="#"
+                id="back-to-simulation"
+                class="back-button"
+            >
+                ← Kembali ke Simulasi
+            </a>
+
+        </div>
+
+
+        <!-- =================================
+            PAGE HEADER
+        ================================== -->
+
+        <section class="result-header">
+
+            <span class="section-label">
+                TAF DIGITAL SHOWCASE
+            </span>
+
+            <h1>
+                Hasil Estimasi Simulasi
+            </h1>
+
+            <p>
+                Berikut adalah estimasi pembiayaan berdasarkan unit,
+                uang muka, tenor, dan pilihan asuransi yang kamu pilih.
+            </p>
+
+        </section>
+
+
+        <!-- =================================
+            RESULT LAYOUT
+        ================================== -->
+
+        <section class="result-layout">
+
+
+            <!-- =================================
+                UNIT SUMMARY
+            ================================== -->
+
+            <div class="result-vehicle-card">
+
+                <div class="result-vehicle-image">
+
+                    <div class="car-placeholder large">
+                        🚗
+                    </div>
+
+                </div>
+
+
+                <div class="result-vehicle-content">
+
+                    <span class="simulation-label">
+                        UNIT YANG DIPILIH
+                    </span>
+
+                    <h2 id="result-vehicle-name">
+                        Toyota Avanza 2022
+                    </h2>
+
+                    <div
+                        class="simulation-vehicle-price"
+                        id="result-vehicle-price"
+                    >
+                        Rp 175.000.000
+                    </div>
+
+
+                    <div class="simulation-vehicle-info">
+
+                        <span id="result-vehicle-mileage">
+                            67.000 km
+                        </span>
+
+                        <span>
+                            •
+                        </span>
+
+                        <span id="result-vehicle-transmission">
+                            Automatic
+                        </span>
+
+                        <span>
+                            •
+                        </span>
+
+                        <span id="result-vehicle-fuel">
+                            Bensin
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                RESULT CARD
+            ================================== -->
+
+            <div class="result-card">
+
+
+                <!-- RESULT HEADER -->
+
+                <div class="result-card-header">
+
+                    <span class="section-label">
+                        ESTIMASI PEMBIAYAAN
+                    </span>
+
+                    <h2>
+                        Ringkasan Simulasi
+                    </h2>
+
+                    <p>
+                        Nilai berikut merupakan estimasi berdasarkan
+                        input simulasi yang kamu pilih.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================
+                    RESULT SUMMARY
+                ================================== -->
+
+                <div class="result-summary">
+
+
+                    <!-- HARGA OTR -->
+
+                    <div class="result-row">
+
+                        <span>
+                            Harga OTR
+                        </span>
+
+                        <strong id="result-price">
+                            Rp 175.000.000
+                        </strong>
+
+                    </div>
+
+
+                    <!-- UANG MUKA -->
+
+                    <div class="result-row">
+
+                        <span>
+                            Uang Muka
+                        </span>
+
+                        <strong id="result-dp">
+                            Rp 35.000.000
+                        </strong>
+
+                    </div>
+
+
+                    <!-- JUMLAH PINJAMAN -->
+
+                    <div class="result-row">
+
+                        <span>
+                            Jumlah Pinjaman
+                        </span>
+
+                        <strong id="result-financing-detail">
+                            Rp 140.000.000
+                        </strong>
+
+                    </div>
+
+
+                    <!-- JANGKA WAKTU -->
+
+                    <div class="result-row">
+
+                        <span>
+                            Jangka Waktu
+                        </span>
+
+                        <strong id="result-tenor">
+                            48 Bulan
+                        </strong>
+
+                    </div>
+
+
+                    <!-- PH -->
+
+                    <div class="result-row">
+
+                        <span>
+                            PH
+                        </span>
+
+                        <strong id="result-ph">
+                            Rp 140.000.000
+                        </strong>
+
+                    </div>
+
+
+                    <!-- TDP -->
+
+                    <div class="result-row">
+
+                        <span>
+                            TDP
+                        </span>
+
+                        <strong id="result-tdp">
+                            Rp 35.000.000
+                        </strong>
+
+                    </div>
+
+
+                    <!-- BUNGA -->
+
+                    <div class="result-row">
+
+                        <span>
+                            Bunga
+                        </span>
+
+                        <strong id="result-interest">
+                            Estimasi
+                        </strong>
+
+                    </div>
+
+
+                    <!-- ASURANSI -->
+
+                    <div class="result-row">
+
+                        <span>
+                            Asuransi
+                        </span>
+
+                        <strong id="result-insurance">
+                            Comprehensive
+                        </strong>
+
+                    </div>
+
+
+                    <!-- JUMLAH ANGSURAN -->
+
+                    <div class="result-row highlight">
+
+                        <span>
+                            Jumlah Angsuran
+                        </span>
+
+                        <strong id="result-installment">
+                            Rp 0 / bulan
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =================================
+                    NOTE
+                ================================== -->
+
+                <div class="result-note">
+
+                    <span>
+                        ⓘ
+                    </span>
+
+                    <p>
+                        Hasil ini merupakan estimasi untuk membantu
+                        memahami kebutuhan pembiayaan. Nilai aktual,
+                        struktur pembiayaan, dan keputusan kredit akan
+                        mengikuti proses dan ketentuan yang berlaku.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================
+                    PRIMARY ACTION
+                ================================== -->
+
+                <button
+                    type="button"
+                    class="result-primary-button"
+                    id="continue-application-button"
+                >
+                    Lanjutkan Pengajuan
+                </button>
+
+
+                <!-- =================================
+                    SECONDARY ACTION
+                ================================== -->
+
+                <a
+                    href="#"
+                    id="change-simulation"
+                    class="result-secondary-button"
+                >
+                    Ubah Simulasi
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+            NEXT STEP
+        ================================== -->
+
+        <section class="result-next-step">
+
+
+            <!-- NEXT STEP HEADER -->
+
+            <div class="next-step-header">
+
+                <span class="section-label">
+                    LANGKAH SELANJUTNYA
+                </span>
+
+                <h2>
+                    Tertarik dengan unit ini?
+                </h2>
+
+                <p>
+                    Lanjutkan pengajuan agar TAF dapat menerima
+                    informasi ketertarikan kamu dan melakukan
+                    follow-up lebih lanjut.
+                </p>
+
+            </div>
+
+
+            <!-- NEXT STEP LIST -->
+
+            <div class="next-step-list">
+
+
+                <!-- STEP 1 -->
+
+                <div class="next-step-item">
+
+                    <div class="next-step-number">
+                        1
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Data ketertarikan dikirim
+                        </strong>
+
+                        <p>
+                            Informasi unit dan simulasi akan
+                            diteruskan sebagai lead untuk
+                            ditindaklanjuti oleh TAF.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+
+                <div class="next-step-item">
+
+                    <div class="next-step-number">
+                        2
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            TAF melakukan follow-up
+                        </strong>
+
+                        <p>
+                            TAF akan menghubungi customer untuk
+                            membahas kebutuhan pembiayaan lebih lanjut.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+
+                <div class="next-step-item">
+
+                    <div class="next-step-number">
+                        3
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Proses pengajuan
+                        </strong>
+
+                        <p>
+                            Jika customer melanjutkan, proses dapat
+                            diteruskan ke tahap pengajuan pembiayaan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

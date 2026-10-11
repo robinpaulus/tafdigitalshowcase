@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Simulasi Pembiayaan | TAF Digital Showcase</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <div class="logo-area">
+
+                <div class="taf-logo">
+                    TAF
+                </div>
+
+                <span>
+                    Digital Showcase
+                </span>
+
+            </div>
+
+
+            <nav class="navigation">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html">
+                    Cari Unit
+                </a>
+
+                <a
+                    href="login-so.html"
+                    class="so-login-button"
+                >
+                    Login SO
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-toggle"
+                aria-label="Buka menu"
+                onclick="toggleMobileMenu()"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="simulation-page">
+
+        <div class="simulation-container">
+
+
+            <!-- =================================
+                 BACK
+            ================================== -->
+
+            <a
+                href="#"
+                id="back-to-detail"
+                class="simulation-back"
+            >
+                ← Kembali ke Detail Unit
+            </a>
+
+
+            <!-- =================================
+                 PAGE HEADER
+            ================================== -->
+
+            <section class="simulation-page-header">
+
+                <span class="simulation-eyebrow">
+                    TAF DIGITAL SHOWCASE
+                </span>
+
+                <h1>
+                    Simulasi Pembiayaan
+                </h1>
+
+                <p>
+                    Tentukan skema pembiayaan yang sesuai
+                    dengan kebutuhan kamu.
+                </p>
+
+            </section>
+
+
+            <!-- =================================
+                 VEHICLE SUMMARY
+            ================================== -->
+
+            <section class="simulation-vehicle-card">
+
+                <div class="simulation-vehicle-main">
+
+                    <div class="simulation-vehicle-icon">
+                        🚗
+                    </div>
+
+                    <div>
+
+                        <span class="simulation-label">
+                            UNIT YANG DIPILIH
+                        </span>
+
+                        <h2 id="simulation-vehicle-name">
+                            -
+                        </h2>
+
+                        <p id="simulation-vehicle-showroom">
+                            -
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="simulation-vehicle-price">
+
+                    <span>
+                        Harga OTR
+                    </span>
+
+                    <strong id="simulation-vehicle-price">
+                        -
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 VEHICLE INFORMATION
+            ================================== -->
+
+            <section class="simulation-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Informasi Kendaraan
+                        </h2>
+
+                        <p>
+                            Detail unit yang kamu pilih.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="simulation-info-grid">
+
+                    <div class="simulation-info-item">
+
+                        <span>
+                            Merk
+                        </span>
+
+                        <strong id="simulation-brand">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="simulation-info-item">
+
+                        <span>
+                            Model
+                        </span>
+
+                        <strong id="simulation-model">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="simulation-info-item">
+
+                        <span>
+                            Tipe
+                        </span>
+
+                        <strong id="simulation-type">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="simulation-info-item">
+
+                        <span>
+                            Tahun
+                        </span>
+
+                        <strong id="simulation-year">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="simulation-info-item">
+
+                        <span>
+                            Kilometer
+                        </span>
+
+                        <strong id="simulation-vehicle-mileage">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="simulation-info-item">
+
+                        <span>
+                            Transmisi
+                        </span>
+
+                        <strong id="simulation-vehicle-transmission">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="simulation-info-item">
+
+                        <span>
+                            Bahan Bakar
+                        </span>
+
+                        <strong id="simulation-vehicle-fuel">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="simulation-info-item">
+
+                        <span>
+                            Warna
+                        </span>
+
+                        <strong id="simulation-color">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 FINANCING FORM
+            ================================== -->
+
+            <section class="simulation-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Detail Pembiayaan
+                        </h2>
+
+                        <p>
+                            Tentukan pilihan pembiayaan
+                            yang ingin kamu simulasikan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="simulation-form">
+
+
+                    <!-- HARGA OTR -->
+
+                    <div class="simulation-form-group full-width">
+
+                        <label for="simulation-otr">
+                            Harga OTR
+                        </label>
+
+                        <div class="currency-input">
+
+                            <span>
+                                Rp
+                            </span>
+
+                            <input
+                                type="text"
+                                id="simulation-otr"
+                                readonly
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DP -->
+
+                    <div class="simulation-form-group">
+
+                        <label for="dp">
+                            Uang Muka (%)
+                        </label>
+
+                        <div class="percentage-input">
+
+                            <input
+                                type="number"
+                                id="dp"
+                                min="15"
+                                max="90"
+                                value="20"
+                            >
+
+                            <span>
+                                %
+                            </span>
+
+                        </div>
+
+                        <small>
+                            Minimum uang muka 15%
+                        </small>
+
+                    </div>
+
+
+                    <!-- DP RUPIAH -->
+
+                    <div class="simulation-form-group">
+
+                        <label>
+                            Uang Muka (Rp)
+                        </label>
+
+                        <div class="currency-input">
+
+                            <span>
+                                Rp
+                            </span>
+
+                            <input
+                                type="text"
+                                id="dp-rupiah"
+                                readonly
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TENOR -->
+
+                    <div class="simulation-form-group">
+
+                        <label for="tenor">
+                            Jangka Waktu
+                        </label>
+
+                        <select id="tenor">
+                            <option value="12">1 Tahun</option>
+                            <option value="24">2 Tahun</option>
+                            <option value="36">3 Tahun</option>
+                            <option value="48">4 Tahun</option>
+                            <option value="60">5 Tahun</option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- ASURANSI -->
+
+                    <div class="simulation-form-group">
+
+                        <label for="insurance">
+                            Asuransi Kendaraan
+                        </label>
+
+                        <select id="insurance">
+
+                            <option value="">
+                                Pilih Asuransi
+                            </option>
+
+                            <option value="Comprehensive">
+                                Comprehensive
+                            </option>
+
+                            <option value="Combine">
+                                Combine
+                            </option>
+
+                            <option value="TLO">
+                                TLO
+                            </option>
+
+                        </select>
+
+                        <small>
+                            Asuransi Astra
+                        </small>
+
+                    </div>
+
+
+                    <!-- BRANCH -->
+
+                    <div class="simulation-form-group full-width">
+
+                        <label for="branch">
+                            Branch TAF
+                        </label>
+
+                        <select id="branch">
+
+                            <option value="">
+                                Pilih Branch TAF
+                            </option>
+
+                            <option value="TAF Palembang">
+                                TAF Palembang
+                            </option>
+
+                            <option value="TAF Prabumulih">
+                                TAF Prabumulih
+                            </option>
+
+                            <option value="TAF Jakarta Selatan">
+                                TAF Jakarta Selatan
+                            </option>
+
+                            <option value="TAF Jakarta Pusat">
+                                TAF Jakarta Pusat
+                            </option>
+
+                            <option value="TAF Bandung">
+                                TAF Bandung
+                            </option>
+
+                            <option value="TAF Surabaya">
+                                TAF Surabaya
+                            </option>
+
+                            <option value="TAF Medan">
+                                TAF Medan
+                            </option>
+
+                            <option value="TAF Pekanbaru">
+                                TAF Pekanbaru
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 INSURANCE INFORMATION
+            ================================== -->
+
+            <section class="insurance-info-card">
+
+                <div class="insurance-info-header">
+
+                    <span class="info-icon">
+                        i
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Pilihan Asuransi Astra
+                        </h3>
+
+                        <p>
+                            Pilih jenis perlindungan kendaraan
+                            untuk simulasi kamu.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="insurance-options">
+
+
+                    <div class="insurance-option">
+
+                        <strong>
+                            Comprehensive
+                        </strong>
+
+                        <p>
+                            Perlindungan Comprehensive sepanjang
+                            masa kredit sesuai dengan luas jaminan
+                            dan ketentuan polis yang berlaku.
+                        </p>
+
+                    </div>
+
+
+                    <div class="insurance-option">
+
+                        <strong>
+                            Combine
+                        </strong>
+
+                        <p>
+                            Tahun pertama menggunakan
+                            Comprehensive dan tahun berikutnya
+                            menggunakan TLO.
+                        </p>
+
+                    </div>
+
+
+                    <div class="insurance-option">
+
+                        <strong>
+                            TLO
+                        </strong>
+
+                        <p>
+                            Total Loss Only untuk perlindungan
+                            sesuai dengan ketentuan pertanggungan
+                            dan polis yang berlaku.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 SIMULATION PREVIEW
+            ================================== -->
+
+            <section class="simulation-preview-card">
+
+                <div>
+
+                    <span>
+                        ESTIMASI PEMBIAYAAN
+                    </span>
+
+                    <h3>
+                        Perkiraan Jumlah Pembiayaan
+                    </h3>
+
+                </div>
+
+
+                <strong id="preview-financing">
+                    Rp 0
+                </strong>
+
+            </section>
+
+
+            <!-- =================================
+                 ACTION
+            ================================== -->
+
+            <section class="simulation-action">
+
+                <p>
+                    Simulasi ini merupakan estimasi dan
+                    bukan merupakan keputusan persetujuan
+                    pembiayaan.
+                </p>
+
+
+                <button
+                    type="button"
+                    class="simulation-submit-button"
+                    onclick="submitSimulation()"
+                >
+                    Hitung Simulasi
+                </button>
+
+            </section>
+
+
+            <!-- =================================
+                 PROCESS
+            ================================== -->
+
+            <section class="simulation-process">
+
+                <div class="process-step active">
+
+                    <span>
+                        1
+                    </span>
+
+                    <strong>
+                        Simulasi
+                    </strong>
+
+                </div>
+
+
+                <div class="process-line"></div>
+
+
+                <div class="process-step">
+
+                    <span>
+                        2
+                    </span>
+
+                    <strong>
+                        Hasil Simulasi
+                    </strong>
+
+                </div>
+
+
+                <div class="process-line"></div>
+
+
+                <div class="process-step">
+
+                    <span>
+                        3
+                    </span>
+
+                    <strong>
+                        Ajukan
+                    </strong>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

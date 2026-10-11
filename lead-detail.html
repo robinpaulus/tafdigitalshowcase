@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Lead Detail - TAF Digital Showcase
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <div class="logo-area">
+
+                <div class="taf-logo">
+                    TAF
+                </div>
+
+                <span>
+                    Digital Showcase
+                </span>
+
+            </div>
+
+
+            <div class="dashboard-user">
+                Sales Officer
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN
+         ========================================== -->
+
+    <main class="lead-detail-page">
+
+        <div class="lead-detail-container">
+
+
+            <!-- ======================================
+                 BACK
+                 ====================================== -->
+
+            <a
+                href="dashboard.html"
+                class="lead-back-button"
+            >
+                ← Kembali ke Lead Management
+            </a>
+
+
+
+            <!-- ======================================
+                 PAGE HEADER
+                 ====================================== -->
+
+            <div class="lead-detail-header">
+
+                <div>
+
+                    <span class="page-label">
+                        LEAD MANAGEMENT
+                    </span>
+
+                    <h1>
+                        Lead Detail
+                    </h1>
+
+                    <p>
+                        Detail informasi customer dan peluang pembiayaan.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="lead-status-badge"
+                    class="status-badge"
+                >
+                    New Lead
+                </div>
+
+            </div>
+
+
+
+            <!-- ======================================
+                 CUSTOMER INFORMATION
+                 ====================================== -->
+
+            <section class="lead-detail-card">
+
+                <div class="detail-card-header">
+
+                    <div>
+
+                        <span class="detail-section-label">
+                            CUSTOMER
+                        </span>
+
+                        <h2>
+                            Customer Information
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-grid">
+
+
+                    <div class="detail-field">
+
+                        <span>
+                            Nama Customer
+                        </span>
+
+                        <strong id="lead-customer-name">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-field">
+
+                        <span>
+                            WhatsApp
+                        </span>
+
+                        <strong id="lead-customer-phone">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-field">
+
+                        <span>
+                            Email
+                        </span>
+
+                        <strong id="lead-customer-email">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-field">
+
+                        <span>
+                            Kota
+                        </span>
+
+                        <strong id="lead-customer-city">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-field">
+
+                        <span>
+                            Tujuan Pembelian
+                        </span>
+
+                        <strong id="lead-customer-purpose">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-field">
+
+                        <span>
+                            Tanggal Lead
+                        </span>
+
+                        <strong id="lead-created-date">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ======================================
+                 UNIT INFORMATION
+                 ====================================== -->
+
+            <section class="lead-detail-card">
+
+                <div class="detail-card-header">
+
+                    <div>
+
+                        <span class="detail-section-label">
+                            VEHICLE
+                        </span>
+
+                        <h2>
+                            Unit Information
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-lead-summary">
+
+
+                    <div class="vehicle-summary-icon">
+                        🚗
+                    </div>
+
+
+                    <div class="vehicle-summary-content">
+
+                        <h3 id="lead-vehicle-name">
+                            -
+                        </h3>
+
+
+                        <p id="lead-showroom">
+                            -
+                        </p>
+
+
+                        <strong id="lead-vehicle-price">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ======================================
+                 SIMULATION
+                 ====================================== -->
+
+            <section class="lead-detail-card">
+
+                <div class="detail-card-header">
+
+                    <div>
+
+                        <span class="detail-section-label">
+                            FINANCING
+                        </span>
+
+                        <h2>
+                            Simulation
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-grid">
+
+
+                    <div class="detail-field">
+
+                        <span>
+                            Harga Unit
+                        </span>
+
+                        <strong id="lead-simulation-price">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-field">
+
+                        <span>
+                            Down Payment
+                        </span>
+
+                        <strong id="lead-simulation-dp">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-field">
+
+                        <span>
+                            Tenor
+                        </span>
+
+                        <strong id="lead-simulation-tenor">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-field">
+
+                        <span>
+                            Estimasi Pembiayaan
+                        </span>
+
+                        <strong id="lead-simulation-financing">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="detail-note">
+
+                    Data simulasi merupakan data prototype dan belum
+                    terhubung dengan sistem pembiayaan TAF.
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ======================================
+                 LEAD STATUS
+                 ====================================== -->
+
+            <section class="lead-detail-card">
+
+                <div class="detail-card-header">
+
+                    <div>
+
+                        <span class="detail-section-label">
+                            PROCESS
+                        </span>
+
+                        <h2>
+                            Lead Status
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="status-update-area">
+
+
+                    <label for="lead-status-select">
+                        Update Status
+                    </label>
+
+
+                    <select id="lead-status-select">
+
+
+                        <option value="New Lead">
+                            New Lead
+                        </option>
+
+
+                        <option value="Contacted">
+                            Contacted
+                        </option>
+
+
+                        <option value="Qualified Prospect">
+                            Qualified Prospect
+                        </option>
+
+
+                        <option value="Simulation">
+                            Simulation
+                        </option>
+
+
+                        <option value="App-In">
+                            App-In
+                        </option>
+
+
+                        <option value="Approved">
+                            Approved
+                        </option>
+
+
+                        <option value="Valid/DO">
+                            Valid/DO
+                        </option>
+
+
+                        <option value="UF">
+                            UF
+                        </option>
+
+
+                        <option value="Lost Opportunity">
+                            Lost Opportunity
+                        </option>
+
+
+                    </select>
+
+
+                    <button
+                        type="button"
+                        class="update-status-button"
+                        onclick="updateLeadStatus()"
+                    >
+                        Update Status
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ======================================
+                 FOLLOW-UP ACTIVITY
+                 ====================================== -->
+
+            <section class="lead-detail-card lead-followup-card">
+
+
+                <!-- FOLLOW-UP HEADER -->
+
+                <div class="lead-detail-card-header">
+
+                    <div>
+
+                        <span class="lead-section-label">
+                            FOLLOW-UP ACTIVITY
+                        </span>
+
+
+                        <h2>
+                            Follow-up Customer
+                        </h2>
+
+
+                        <p>
+                            Catat hasil komunikasi dengan customer
+                            dan tentukan tindakan berikutnya agar
+                            setiap opportunity dapat ditindaklanjuti
+                            dengan jelas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FOLLOW-UP SUMMARY -->
+
+                <div class="lead-followup-summary">
+
+
+                    <div class="lead-followup-summary-item">
+
+                        <span>
+                            Last Follow-up
+                        </span>
+
+
+                        <strong id="lead-last-followup">
+                            Belum ada follow-up
+                        </strong>
+
+                    </div>
+
+
+                    <div class="lead-followup-summary-item">
+
+                        <span>
+                            Next Action
+                        </span>
+
+
+                        <strong id="lead-next-action">
+                            Initial follow-up
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- FOLLOW-UP FORM -->
+
+                <div class="lead-followup-form">
+
+
+                    <label for="lead-followup-note">
+
+                        Catatan Hasil Follow-up
+
+                    </label>
+
+
+                    <p class="lead-followup-helper">
+
+                        Tuliskan hasil komunikasi terakhir dengan
+                        customer, kebutuhan customer, atau informasi
+                        penting yang menjadi dasar tindak lanjut berikutnya.
+
+                    </p>
+
+
+                    <textarea
+                        id="lead-followup-note"
+                        rows="5"
+                        placeholder="Contoh: Customer sudah dihubungi. Customer masih berminat dengan Toyota Avanza dan meminta simulasi DP 30% tenor 48 bulan."
+                    ></textarea>
+
+
+                    <button
+                        type="button"
+                        class="lead-followup-button"
+                        onclick="saveLeadFollowup()"
+                    >
+                        Simpan Follow-up
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- FOLLOW-UP HISTORY -->
+
+                <div class="lead-followup-history">
+
+
+                    <div class="lead-followup-history-header">
+
+                        <div>
+
+                            <span class="lead-section-label">
+                                ACTIVITY HISTORY
+                            </span>
+
+
+                            <h3>
+                                Riwayat Follow-up
+                            </h3>
+
+
+                            <p>
+                                Riwayat komunikasi customer yang
+                                sudah dicatat oleh Sales Officer.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="lead-followup-history-list"
+                        class="lead-followup-history-list"
+                    >
+
+                        <div class="lead-followup-empty">
+
+                            Belum ada riwayat follow-up.
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TAF Sales Dashboard | Digital Showcase</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+
+            <div class="logo-area">
+
+                <div class="taf-logo">
+                    TAF
+                </div>
+
+                <span>
+                    Digital Showcase
+                </span>
+
+            </div>
+
+
+            <nav
+                class="navigation"
+                id="navigation"
+            >
+
+                <a href="index.html">
+                    Customer View
+                </a>
+
+                <a
+                    href="dashboard.html"
+                    class="dashboard-nav-active"
+                >
+                    Sales Dashboard
+                </a>
+
+            </nav>
+
+
+            <button
+                class="menu-toggle"
+                onclick="toggleMenu()"
+                aria-label="Buka menu"
+            >
+                ☰
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main class="dashboard-page">
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="dashboard-header">
+
+
+            <div>
+
+                <span class="section-label">
+                    TAF DIGITAL SHOWCASE
+                </span>
+
+                <h1>
+                    Sales Lead Dashboard
+                </h1>
+
+                <p>
+                    Monitor customer opportunities dari Digital
+                    Showcase dan tindak lanjuti setiap lead yang masuk.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-user">
+
+                <span class="dashboard-user-label">
+                    ROLE
+                </span>
+
+                <strong>
+                    Sales Officer
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- KPI -->
+
+        <section class="dashboard-kpi-grid">
+
+            <!-- NEW LEAD -->
+            <div class="kpi-card">
+                <span class="kpi-label">
+                    NEW LEAD
+                </span>
+
+                <strong
+                    id="kpi-new-lead"
+                    class="kpi-value"
+                >
+                    0
+                </strong>
+
+                <p>
+                    Lead baru yang perlu ditindaklanjuti
+                </p>
+            </div>
+
+
+            <!-- CONTACTED -->
+            <div class="kpi-card">
+                <span class="kpi-label">
+                    CONTACTED
+                </span>
+
+                <strong
+                    id="kpi-contacted"
+                    class="kpi-value"
+                >
+                    0
+                </strong>
+
+                <p>
+                    Lead yang sudah dihubungi
+                </p>
+            </div>
+
+
+            <!-- QUALIFIED PROSPECT -->
+            <div class="kpi-card">
+                <span class="kpi-label">
+                    QUALIFIED PROSPECT
+                </span>
+
+                <strong
+                    id="kpi-qualified-prospect"
+                    class="kpi-value"
+                >
+                    0
+                </strong>
+
+                <p>
+                    Prospek yang terkonfirmasi
+                </p>
+            </div>
+
+
+            <!-- SIMULATION -->
+            <div class="kpi-card">
+                <span class="kpi-label">
+                    SIMULATION
+                </span>
+
+                <strong
+                    id="kpi-simulation"
+                    class="kpi-value"
+                >
+                    0
+                </strong>
+
+                <p>
+                    Lead yang sudah masuk simulasi
+                </p>
+            </div>
+
+
+            <!-- APP-IN -->
+            <div class="kpi-card">
+                <span class="kpi-label">
+                    APP-IN
+                </span>
+
+                <strong
+                    id="kpi-appin"
+                    class="kpi-value"
+                >
+                    0
+                </strong>
+
+                <p>
+                    Lead yang sudah App-In
+                </p>
+            </div>
+
+
+            <!-- APPROVED -->
+            <div class="kpi-card">
+                <span class="kpi-label">
+                    APPROVED
+                </span>
+
+                <strong
+                    id="kpi-approved"
+                    class="kpi-value"
+                >
+                    0
+                </strong>
+
+                <p>
+                    Lead yang sudah mendapatkan approval
+                </p>
+            </div>
+
+
+            <!-- VALID / DO -->
+            <div class="kpi-card">
+                <span class="kpi-label">
+                    VALID / DO
+                </span>
+
+                <strong
+                    id="kpi-valid-do"
+                    class="kpi-value"
+                >
+                    0
+                </strong>
+
+                <p>
+                    Lead yang sudah mencapai Valid / DO
+                </p>
+            </div>
+
+
+            <!-- UF -->
+            <div class="kpi-card">
+                <span class="kpi-label">
+                    UF
+                </span>
+
+                <strong
+                    id="kpi-uf"
+                    class="kpi-value"
+                >
+                    0
+                </strong>
+
+                <p>
+                    Opportunity yang menghasilkan UF
+                </p>
+            </div>
+
+
+            <!-- LOST OPPORTUNITY -->
+            <div class="kpi-card kpi-card-lost">
+                <span class="kpi-label">
+                    LOST OPPORTUNITY
+                </span>
+
+                <strong
+                    id="kpi-lost-opportunity"
+                    class="kpi-value"
+                >
+                    0
+                </strong>
+
+                <p>
+                    Opportunity yang tidak berhasil dikonversi
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- LEAD MANAGEMENT -->
+
+        <section class="lead-management">
+
+
+            <div class="lead-management-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        OPPORTUNITY MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Customer Leads
+                    </h2>
+
+                    <p>
+                        Daftar customer yang menunjukkan ketertarikan
+                        terhadap unit melalui Digital Showcase.
+                    </p>
+
+                </div>
+
+
+                <div class="lead-count">
+
+                    <strong id="lead-count">
+                        0
+                    </strong>
+
+                    <span>
+                        Total Lead
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SEARCH + FILTER -->
+
+            <div class="lead-toolbar">
+
+
+                <div class="lead-search">
+
+                    <label
+                        for="lead-search-input"
+                        class="sr-only"
+                    >
+                        Cari lead
+                    </label>
+
+                    <input
+                        type="search"
+                        id="lead-search-input"
+                        placeholder="Cari customer, unit, atau showroom..."
+                    >
+
+                </div>
+
+
+                <div class="lead-filter">
+
+                    <label
+                        for="lead-status-filter"
+                        class="sr-only"
+                    >
+                        Filter status
+                    </label>
+
+                    <select id="lead-status-filter">
+
+                        <option value="all">
+                            Semua Status
+                        </option>
+
+                        <option value="New Lead">
+                            New Lead
+                        </option>
+
+                        <option value="Contacted">
+                            Contacted
+                        </option>
+
+                        <option value="Qualified Prospect">
+                            Qualified Prospect
+                        </option>
+
+                        <option value="Simulation">
+                            Simulation
+                        </option>
+
+                        <option value="App-In">
+                            App-In
+                        </option>
+
+                        <option value="Approved">
+                            Approved
+                        </option>
+
+                        <option value="Valid/DO">
+                            Valid / DO
+                        </option>
+
+                        <option value="UF">
+                            UF
+                        </option>
+
+                        <option value="Lost Opportunity">
+                            Lost Opportunity
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- TABLE -->
+
+            <div class="lead-table-wrapper">
+
+
+                <table class="lead-table">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Unit
+                            </th>
+
+                            <th>
+                                Showroom
+                            </th>
+
+                            <th>
+                                Simulation
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="lead-table-body">
+
+                        <!-- Data diisi JavaScript -->
+
+                    </tbody>
+
+
+                </table>
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="lead-empty"
+                    id="lead-empty"
+                >
+
+                    <div class="lead-empty-icon">
+                        ◎
+                    </div>
+
+                    <h3>
+                        Belum ada lead
+                    </h3>
+
+                    <p>
+                        Customer yang mengirimkan ketertarikan
+                        melalui Digital Showcase akan muncul di sini.
+                    </p>
+
+                    <a
+                        href="index.html"
+                        class="lead-empty-button"
+                    >
+                        Lihat Customer View
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Ajukan Simulasi | TAF Digital Showcase</title>
+
+    <!-- CSS utama -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="main-header">
+        <div class="header-container">
+
+            <div class="logo-area">
+                <div class="taf-logo">TAF</div>
+                <span>Digital Showcase</span>
+            </div>
+
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="index.html#unit-section">Cari Unit</a>
+                <a href="login-so.html" class="so-login-button">
+                    Login SO
+                </a>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Buka menu" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="simulation-page">
+
+
+        <!-- =====================================
+             TOP NAVIGATION
+        ====================================== -->
+
+        <div class="simulation-topbar">
+
+            <a
+                href="#"
+                id="back-to-detail"
+                class="back-button"
+            >
+                ←
+                <span>Kembali ke Detail Unit</span>
+            </a>
+
+        </div>
+
+
+
+        <!-- =====================================
+             PAGE HEADER
+        ====================================== -->
+
+        <section class="simulation-header">
+
+            <span class="section-label">
+                TAF DIGITAL SHOWCASE
+            </span>
+
+            <h1>
+                Ajukan Simulasi Pembiayaan
+            </h1>
+
+            <p>
+                Lihat estimasi pembiayaan berdasarkan
+                unit yang kamu pilih.
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================
+             SIMULATION CONTENT
+        ====================================== -->
+
+        <section class="simulation-layout">
+
+
+            <!-- =================================
+                 VEHICLE SUMMARY
+            ================================== -->
+
+            <div class="simulation-vehicle-card">
+
+                <div class="simulation-vehicle-image">
+
+                    <div class="car-placeholder large">
+                        🚗
+                    </div>
+
+                </div>
+
+
+                <div class="simulation-vehicle-content">
+
+                    <span class="simulation-label">
+                        UNIT YANG DIPILIH
+                    </span>
+
+                    <h2 id="simulation-vehicle-name">
+                        Toyota Avanza 2022
+                    </h2>
+
+                    <div
+                        class="simulation-vehicle-price"
+                        id="simulation-vehicle-price"
+                    >
+                        Rp 175.000.000
+                    </div>
+
+
+                    <div class="simulation-vehicle-info">
+
+                        <span id="simulation-vehicle-mileage">
+                            67.000 km
+                        </span>
+
+                        <span>
+                            •
+                        </span>
+
+                        <span id="simulation-vehicle-transmission">
+                            Automatic
+                        </span>
+
+                        <span>
+                            •
+                        </span>
+
+                        <span id="simulation-vehicle-fuel">
+                            Bensin
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 SIMULATION FORM
+            ================================== -->
+
+            <div class="simulation-form-card">
+
+                <div class="simulation-form-header">
+
+                    <h2>
+                        Detail Simulasi
+                    </h2>
+
+                    <p>
+                        Tentukan uang muka dan tenor
+                        yang ingin kamu simulasikan.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================
+                     DOWN PAYMENT
+                ================================== -->
+
+                <div class="form-group">
+
+                    <label for="dp">
+                        Uang Muka
+                    </label>
+
+                    <div class="input-with-suffix">
+
+                        <input
+                            type="number"
+                            id="dp"
+                            name="dp"
+                            min="10"
+                            max="90"
+                            value="20"
+                            aria-describedby="dp-help"
+                        >
+
+                        <span>
+                            %
+                        </span>
+
+                    </div>
+
+                    <small id="dp-help">
+                        Masukkan persentase uang muka
+                        untuk melihat estimasi.
+                    </small>
+
+                </div>
+
+
+
+                <!-- =================================
+                     TENOR
+                ================================== -->
+
+                <div class="form-group">
+
+                    <label for="tenor">
+                        Tenor
+                    </label>
+
+                    <select
+                        id="tenor"
+                        name="tenor"
+                    >
+
+                        <option value="36">
+                            36 bulan
+                        </option>
+
+                        <option
+                            value="48"
+                            selected
+                        >
+                            48 bulan
+                        </option>
+
+                        <option value="60">
+                            60 bulan
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- =================================
+                     ESTIMATION PREVIEW
+                ================================== -->
+
+                <div class="simulation-preview">
+
+                    <div class="preview-row">
+
+                        <span>
+                            Harga Kendaraan
+                        </span>
+
+                        <strong id="preview-price">
+                            Rp 175.000.000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="preview-row">
+
+                        <span>
+                            Uang Muka
+                        </span>
+
+                        <strong id="preview-dp">
+                            Rp 35.000.000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="preview-row">
+
+                        <span>
+                            Pokok Pembiayaan
+                        </span>
+
+                        <strong id="preview-financing">
+                            Rp 140.000.000
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     INFORMATION NOTE
+                ================================== -->
+
+                <div class="simulation-note">
+
+                    <span>
+                        ℹ
+                    </span>
+
+                    <p>
+                        Nilai di atas merupakan estimasi
+                        prototype berdasarkan unit,
+                        uang muka, dan tenor yang dipilih.
+                        Bukan merupakan penawaran atau
+                        persetujuan pembiayaan.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================
+                     ACTION
+                ================================== -->
+
+                <button
+                    type="button"
+                    class="simulation-submit"
+                    onclick="submitSimulation()"
+                >
+                    Lihat Estimasi
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            taf
+        </div>
+
+        <p>
+            TAF Digital Showcase
+        </p>
+
+        <small>
+            Prototype / Kaizen Countermeasure
+        </small>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
