@@ -3194,6 +3194,80 @@ function getStoredLead() {
 }
 
 
+async function loadDashboardSampleData() {
+
+    const sampleVersion = "2";
+
+
+    if (
+        localStorage.getItem("tafLeadSampleVersion") === sampleVersion
+    ) {
+        return;
+    }
+
+
+    try {
+
+        const response = await fetch("data/leads.json");
+
+
+        if (!response.ok) {
+            throw new Error("Data lead dummy tidak dapat dimuat.");
+        }
+
+
+        const sampleLeads = await response.json();
+
+
+        if (!Array.isArray(sampleLeads)) {
+            throw new Error("Format data lead dummy tidak valid.");
+        }
+
+
+        const sampleIds = new Set(
+            sampleLeads.map(
+                function(lead) {
+                    return lead.id;
+                }
+            )
+        );
+
+
+        const existingLeads = getStoredLead();
+
+
+        const customerLeads = existingLeads.filter(
+            function(lead) {
+                return !sampleIds.has(lead.id);
+            }
+        );
+
+
+        localStorage.setItem(
+            "tafLeads",
+            JSON.stringify(
+                sampleLeads.concat(customerLeads)
+            )
+        );
+
+
+        localStorage.setItem(
+            "tafLeadSampleVersion",
+            sampleVersion
+        );
+
+    } catch (error) {
+
+        console.error(
+            "Data lead dummy tidak dapat dimuat:",
+            error
+        );
+
+    }
+
+}
+
+
 /* =====================================================
    DASHBOARD - STATUS CLASS
 ===================================================== */
@@ -4820,13 +4894,19 @@ document.addEventListener(
             )
         ) {
 
-            renderLeadDashboard();
-
-            updateDashboardKPI();
-
-            updateTotalLead();
-
             setupDashboardFilters();
+
+            loadDashboardSampleData().then(
+                function() {
+
+                    renderLeadDashboard();
+
+                    updateDashboardKPI();
+
+                    updateTotalLead();
+
+                }
+            );
 
         }
 

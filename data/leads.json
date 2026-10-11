@@ -1,0 +1,219 @@
+[
+  {
+    "id": "LEAD-DUMMY-001",
+    "customerName": "Syahrifudin",
+    "customerPhone": "081278345621",
+    "customerEmail": "syahrifudin@example.com",
+    "customerCity": "Palembang",
+    "customerPurpose": "Kendaraan keluarga",
+    "vehicle": "avanza",
+    "vehicleName": "Toyota Avanza 2022",
+    "vehiclePrice": 175000000,
+    "showroom": "VIP Cars Mobilindo - Palembang",
+    "dp": 20,
+    "dpAmount": 35000000,
+    "tenor": 12,
+    "status": "New Lead",
+    "createdAt": "2026-10-10T09:00:00.000Z",
+    "lastFollowup": null,
+    "nextAction": "Hubungi customer untuk konfirmasi minat",
+    "followupNote": "",
+    "financing": 140000000,
+    "followupHistory": []
+  },
+  {
+    "id": "LEAD-DUMMY-002",
+    "customerName": "Trisno Febrianto",
+    "customerPhone": "082167493805",
+    "customerEmail": "trisno.febrianto@example.com",
+    "customerCity": "Palembang",
+    "customerPurpose": "Kendaraan keluarga",
+    "vehicle": "avanza",
+    "vehicleName": "Toyota Avanza 2022",
+    "vehiclePrice": 175000000,
+    "showroom": "VIP Cars Mobilindo - Palembang",
+    "dp": 20,
+    "dpAmount": 35000000,
+    "tenor": 12,
+    "status": "Contacted",
+    "createdAt": "2026-10-07T09:00:00.000Z",
+    "lastFollowup": "2026-10-08T09:30:00.000Z",
+    "nextAction": "Kirim simulasi DP 20% tenor 12 bulan",
+    "followupNote": "Customer sudah dihubungi dan masih berminat. Customer meminta simulasi cicilan untuk Toyota Avanza.",
+    "financing": 140000000,
+    "followupHistory": [
+      {
+        "date": "2026-10-08T09:30:00.000Z",
+        "note": "Customer sudah dihubungi dan masih berminat. Customer meminta simulasi cicilan untuk Toyota Avanza.",
+        "nextAction": "Kirim simulasi DP 20% tenor 12 bulan"
+      }
+    ]
+  },
+  {
+    "id": "LEAD-DUMMY-003",
+    "customerName": "Rido Fernando",
+    "customerPhone": "085273619440",
+    "customerEmail": "rido.fernando@example.com",
+    "customerCity": "Palembang",
+    "customerPurpose": "Kendaraan keluarga",
+    "vehicle": "avanza",
+    "vehicleName": "Toyota Avanza 2022",
+    "vehiclePrice": 175000000,
+    "showroom": "VIP Cars Mobilindo - Palembang",
+    "dp": 20,
+    "dpAmount": 35000000,
+    "tenor": 12,
+    "status": "Valid/DO",
+    "createdAt": "2026-09-20T09:00:00.000Z",
+    "lastFollowup": "2026-09-30T09:00:00.000Z",
+    "nextAction": "Opportunity selesai",
+    "followupNote": "Customer menyelesaikan proses dan unit berhasil menjadi Valid/DO.",
+    "financing": 140000000,
+    "followupHistory": [
+      {
+        "date": "2026-09-24T09:00:00.000Z",
+        "note": "Customer sudah dihubungi dan menyampaikan ketertarikan terhadap unit Toyota Avanza 2022.",
+        "nextAction": "Lanjut simulasi pembiayaan"
+      },
+      {
+        "date": "2026-09-25T09:00:00.000Z",
+        "note": "Customer menerima First Offer TAF dan menyetujui skema pembiayaan yang ditawarkan.",
+        "nextAction": "Submit App-In"
+      },
+      {
+        "date": "2026-09-27T09:00:00.000Z",
+        "note": "Pengajuan customer sudah diproses dan mendapatkan Approval.",
+        "nextAction": "Proses Valid/DO"
+      },
+      {
+        "date": "2026-09-30T09:00:00.000Z",
+        "note": "Customer menyelesaikan proses dan unit berhasil menjadi Valid/DO.",
+        "nextAction": "Opportunity selesai"
+      }
+    ]
+  },
+  {
+    "id": "LEAD-DUMMY-004",
+    "customerName": "Samuel Pahala",
+    "customerPhone": "081356827914",
+    "customerEmail": "samuel.pahala@example.com",
+    "customerCity": "Palembang",
+    "customerPurpose": "Kendaraan pribadi",
+    "vehicle": "brio",
+    "vehicleName": "Honda Brio 2023",
+    "vehiclePrice": 165000000,
+    "showroom": "Partner Showroom TAF",
+    "dp": 80,
+    "dpAmount": 132000000,
+    "tenor": 12,
+    "status": "Simulation",
+    "createdAt": "2026-10-05T09:00:00.000Z",
+    "lastFollowup": "2026-10-07T10:00:00.000Z",
+    "nextAction": "Konfirmasi kesesuaian simulasi dengan customer",
+    "followupNote": "Simulasi DP 80% tenor 12 bulan sudah disampaikan. Customer sedang mempertimbangkan estimasi cicilan.",
+    "financing": 33000000,
+    "followupHistory": [
+      {
+        "date": "2026-10-06T09:15:00.000Z",
+        "note": "Customer tertarik pada Honda Brio dan meminta simulasi dengan DP 80% tenor 12 bulan.",
+        "nextAction": "Siapkan simulasi pembiayaan"
+      },
+      {
+        "date": "2026-10-07T10:00:00.000Z",
+        "note": "Simulasi DP 80% tenor 12 bulan sudah disampaikan. Customer sedang mempertimbangkan estimasi cicilan.",
+        "nextAction": "Konfirmasi kesesuaian simulasi dengan customer"
+      }
+    ]
+  },
+  {
+    "id": "LEAD-DUMMY-005",
+    "customerName": "Rizky Juliansyah",
+    "customerPhone": "089612743508",
+    "customerEmail": "rizky.juliansyah@example.com",
+    "customerCity": "Palembang",
+    "customerPurpose": "Kendaraan keluarga",
+    "vehicle": "rush",
+    "vehicleName": "Toyota Rush 2022",
+    "vehiclePrice": 205000000,
+    "showroom": "Partner Showroom TAF",
+    "dp": 50,
+    "dpAmount": 102500000,
+    "tenor": 60,
+    "status": "Lost Opportunity",
+    "createdAt": "2026-09-28T09:00:00.000Z",
+    "lastFollowup": "2026-10-03T10:00:00.000Z",
+    "nextAction": "Opportunity ditutup; hubungi kembali jika kebutuhan berubah",
+    "followupNote": "Customer memutuskan tidak melanjutkan karena estimasi cicilan belum sesuai anggaran.",
+    "financing": 102500000,
+    "followupHistory": [
+      {
+        "date": "2026-09-29T09:15:00.000Z",
+        "note": "Customer tertarik pada Toyota Rush dan meminta simulasi DP 50% tenor 60 bulan.",
+        "nextAction": "Siapkan simulasi pembiayaan"
+      },
+      {
+        "date": "2026-10-01T10:00:00.000Z",
+        "note": "Simulasi pembiayaan sudah dikirim. Customer meminta waktu untuk membandingkan estimasi cicilan.",
+        "nextAction": "Hubungi kembali untuk konfirmasi keputusan"
+      },
+      {
+        "date": "2026-10-03T10:00:00.000Z",
+        "note": "Customer memutuskan tidak melanjutkan karena estimasi cicilan belum sesuai anggaran.",
+        "nextAction": "Opportunity ditutup"
+      }
+    ]
+  },
+  {
+    "id": "LEAD-DUMMY-006",
+    "customerName": "Febri Juliansyah",
+    "customerPhone": "082193765420",
+    "customerEmail": "febri.juliansyah@example.com",
+    "customerCity": "Palembang",
+    "customerPurpose": "Kendaraan pribadi",
+    "vehicle": "avanza",
+    "vehicleName": "Toyota Avanza 2022",
+    "vehiclePrice": 175000000,
+    "showroom": "VIP Cars Mobilindo - Palembang",
+    "dp": 15,
+    "dpAmount": 26250000,
+    "tenor": 12,
+    "status": "UF",
+    "createdAt": "2026-09-15T09:00:00.000Z",
+    "lastFollowup": "2026-09-26T09:00:00.000Z",
+    "nextAction": "Konfirmasi tindak lanjut setelah UF",
+    "followupNote": "Pembiayaan telah mencapai tahap UF.",
+    "financing": 148750000,
+    "followupHistory": [
+      {
+        "date": "2026-09-16T09:00:00.000Z",
+        "note": "Customer sudah dihubungi dan mengonfirmasi kebutuhan kendaraan pribadi.",
+        "nextAction": "Jadwalkan simulasi pembiayaan"
+      },
+      {
+        "date": "2026-09-17T09:00:00.000Z",
+        "note": "Simulasi DP 15% tenor 12 bulan sudah dijelaskan kepada customer.",
+        "nextAction": "Konfirmasi persetujuan untuk pengajuan"
+      },
+      {
+        "date": "2026-09-19T09:00:00.000Z",
+        "note": "Customer menyetujui simulasi dan pengajuan App-In telah disubmit.",
+        "nextAction": "Pantau proses approval"
+      },
+      {
+        "date": "2026-09-22T09:00:00.000Z",
+        "note": "Pengajuan telah mendapatkan Approval.",
+        "nextAction": "Lanjutkan proses Valid/DO"
+      },
+      {
+        "date": "2026-09-24T09:00:00.000Z",
+        "note": "Dokumen dan proses serah terima selesai; status unit Valid/DO.",
+        "nextAction": "Pantau pencairan pembiayaan"
+      },
+      {
+        "date": "2026-09-26T09:00:00.000Z",
+        "note": "Pembiayaan telah mencapai tahap UF.",
+        "nextAction": "Konfirmasi tindak lanjut setelah UF"
+      }
+    ]
+  }
+]
