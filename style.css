@@ -878,45 +878,30 @@ footer small {
 }
 
 .vehicle-whatsapp-contact {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: 22px;
-    padding: 14px 18px;
-    border: 1px solid #f0e7de;
-    border-radius: var(--radius-medium);
-    background: #fff8f1;
-}
-
-.whatsapp-contact-label {
-    color: var(--text-dark);
-    font-size: 16px;
-    font-weight: 600;
+    margin-top: 18px;
 }
 
 .whatsapp-contact-number {
-    display: inline-flex;
-    flex: 1 1 max-content;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    min-height: 42px;
-    padding: 8px 20px;
+    gap: 10px;
+    width: 100%;
+    min-height: 72px;
+    padding: 10px 20px;
     border-radius: 999px;
     background: #2d3940;
     color: var(--white);
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 23px;
+    font-weight: 500;
     white-space: nowrap;
 }
 
 .whatsapp-contact-icon {
-    width: 22px;
-    height: 22px;
-    max-width: 22px;
-    max-height: 22px;
+    width: 38px;
+    height: 38px;
+    max-width: 38px;
+    max-height: 38px;
     flex: 0 0 auto;
     display: block;
     color: #25d366;
@@ -1406,6 +1391,20 @@ footer small {
 
     .main-vehicle-image {
         height: 260px;
+    }
+
+    .whatsapp-contact-number {
+        min-height: 56px;
+        gap: 8px;
+        padding: 8px 14px;
+        font-size: 16px;
+    }
+
+    .whatsapp-contact-icon {
+        width: 28px;
+        height: 28px;
+        max-width: 28px;
+        max-height: 28px;
     }
 
     .car-placeholder.large {
